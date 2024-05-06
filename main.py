@@ -1,4 +1,10 @@
+"""
+Main module.
+"""
+
+
 def main():
+    """Hello world function."""
     print("Hello world!")
 
 
