@@ -1,31 +1,33 @@
+#
 print("Заменить символ “#” на символ “/” в строке 'www.my_site.com#about'")
-message = "www.my_site.com#about"
-print(message.replace("#", "/"))
+MESSAGE = "www.my_site.com#about"
+print(MESSAGE.replace("#", "/"))
 print()
 
 print("Напишите программу, которая добавляет ‘ing’ к словам")
-message2 = "Hello world"
-elements = message2.split()
+MESSAGE2 = "Hello world"
+elements = MESSAGE2.split()
 arr = []
 for i in elements:
     arr.append(i + 'ing')
-message2 = " ".join(arr)
-print(message2)
+MESSAGE2 = " ".join(arr)
+print(MESSAGE2)
 print()
 
 print('В строке “Ivanou Ivan” поменяйте местами слова => "Ivan Ivanou"')
-message3 = "Ivanou Ivan"
-elements = message3.split()
-message3 = " ".join(elements[::-1])
-print(message3)
+MESSAGE3 = "Ivanou Ivan"
+elements = MESSAGE3.split()
+MESSAGE3 = " ".join(elements[::-1])
+print(MESSAGE3)
 print()
 
 print("Напишите программу которая удаляет пробел в начале, в конце строки")
-s = " Hometask "
-print(s[1:-1])
+S = " Hometask "
+print(S[1:-1])
 print()
 
-print("Имена собственные всегда начинаются с заглавной буквы, за которой следуют строчные буквы. Исправьте данное имя собственное так, чтобы оно соответствовало этому утверждению.")
+print("Имена собственные всегда начинаются с заглавной буквы, за которой следуют строчные буквы. Исправьте данное имя "
+      "собственное так, чтобы оно соответствовало этому утверждению.")
 # "pARiS" >> "Paris"
-a = "pARis"
-print(a.title())
+A = "pARis"
+print(A.title())
