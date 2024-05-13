@@ -12,7 +12,7 @@ print('Дан список: [Ivan, Ivanou], и 2 строки: Minsk, Belarus')
 NAME = ["Ivan", "Ivanou"]
 PLACE1 = "Minsk"
 PLACE2 = "Belarus"
-print(f"Привет,{" ".join(NAME)}! Добро пожаловать в {PLACE1} {PLACE2}")
+print(f"Привет,{' '.join(NAME)}! Добро пожаловать в {PLACE1} {PLACE2}")
 print()
 print('Дан список ["I", "love", "arrays", "they", "are", "my", "favorite"] '
       'сделайте из него строку => "I love arrays they are my favorite"')
