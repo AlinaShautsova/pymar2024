@@ -9,11 +9,10 @@ MESSAGE2 = "I love arrays they are my favorite"
 print(MESSAGE2.split())
 print()
 print('Дан список: [Ivan, Ivanou], и 2 строки: Minsk, Belarus')
-A = ["Ivan", "Ivanou"]
-B = "Minsk"
-C = "Belarus"
-print("Привет, {name}! Добро пожаловать в {place} "
-      "{place2}".format(name=" ".join(A), place=B, place2=C))
+NAME = ["Ivan", "Ivanou"]
+PLACE1 = "Minsk"
+PLACE2 = "Belarus"
+print(f"Привет,{" ".join(NAME)}! Добро пожаловать в {PLACE1} {PLACE2}")
 print()
 print('Дан список ["I", "love", "arrays", "they", "are", "my", "favorite"] '
       'сделайте из него строку => "I love arrays they are my favorite"')
