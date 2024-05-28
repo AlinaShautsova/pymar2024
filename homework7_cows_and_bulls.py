@@ -2,8 +2,7 @@
 import random
 from typing import List
 
-print("Добро пожаловать в игру 'Быки и коровы'!")
-print("Компьютером загадано 4-значное число с неповторяющимися цифрами:")
+print("Game 'Bulls and Cows'!")
 
 list_with_random_numbers: List[int] = []
 while len(list_with_random_numbers) != 4:
@@ -16,7 +15,7 @@ common_bulls: List[int] = []
 while True:
     common_cows.clear()
     common_bulls.clear()
-    str_from_player = input("Назовите ваше число: ")
+    str_from_player = input("Enter you prediction: ")
 
     list_from_player = []
     for char in str_from_player:
@@ -25,13 +24,13 @@ while True:
     for item in list_from_player:
         if item in list_with_random_numbers:
             common_cows.append(item)
-    print(f"{len(common_cows)} Коровы")
+    print(f"{len(common_cows)} Cows")
 
     for i in range(4):
         if list_from_player[i] == list_with_random_numbers[i]:
             common_bulls.append(list_from_player[i])
-    print(f"{len(common_bulls)} Быки")
+    print(f"{len(common_bulls)} Bulls")
 
     if common_cows == common_bulls:
-        print("Поздравляем! Вы выиграли!")
+        print("Congratulations! You are winner!")
         break
