@@ -23,10 +23,7 @@ def will_it_be_strictly_increasing(arr):
 
 def solution(arr):
     """Response output."""
-    if will_it_be_strictly_increasing(arr):
-        return True
-    else:
-        return False
+    return will_it_be_strictly_increasing(arr)
 
 
 assert solution([1, 2, 3])
