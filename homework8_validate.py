@@ -1,8 +1,10 @@
 """Module providing a function printing python version."""
-number_of_credit_card = input("Enter your card number: ")
-while not number_of_credit_card.isdigit():
+while True:
+    number_of_credit_card = input("Enter your card number: ")
+    if number_of_credit_card.isdigit():
+        break
     print("Errors. Number of credit card must consist of digits. ")
-    number_of_credit_card = input("Enter your correct card number: ")
+
 
 list_with_reserved_numbers = []
 for i in range(0, len(number_of_credit_card), 2):

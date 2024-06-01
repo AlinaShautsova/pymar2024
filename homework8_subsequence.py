@@ -21,16 +21,16 @@ def will_it_be_strictly_increasing(arr):
     return False
 
 
-def answer(arr):
+def solution(arr):
     """Response output."""
     if will_it_be_strictly_increasing(arr):
-        print("Answer : True")
+        return True
     else:
-        print("Answer : False")
+        return False
 
 
-answer([1, 2, 3])
-answer([1, 2, 1, 2])
-answer([1, 3, 2, 1])
-answer([1, 2, 3, 4, 5, 3, 5, 6])
-answer([40, 50, 60, 10, 20, 30])
+assert solution([1, 2, 3])
+assert solution([1, 2, 1, 2])
+assert solution([1, 3, 2, 1])
+assert solution([1, 2, 3, 4, 5, 3, 5, 6])
+assert solution([40, 50, 60, 10, 20, 30])
