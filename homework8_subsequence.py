@@ -2,6 +2,7 @@
 
 
 def test_for_increasing_function(arr):
+    """Testing for increasing function."""
     for i in range(len(arr) - 1):
         if arr[i] >= arr[i + 1]:
             return False
@@ -9,6 +10,7 @@ def test_for_increasing_function(arr):
 
 
 def will_it_be_strictly_increasing(arr):
+    """The function slices through and checks on increasing."""
     if test_for_increasing_function(arr):
         return True
 
@@ -20,10 +22,12 @@ def will_it_be_strictly_increasing(arr):
 
 
 def answer(arr):
+    """Response output."""
     if will_it_be_strictly_increasing(arr):
         print("Answer : True")
     else:
         print("Answer : False")
+
 
 answer([1, 2, 3])
 answer([1, 2, 1, 2])

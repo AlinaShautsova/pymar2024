@@ -17,13 +17,13 @@ list_with_double_value = []
 for number in list_with_reserved_numbers:
     list_with_double_value.append(number * 2)
 
-for i in range(len(list_with_double_value)):
+for i, value in enumerate(list_with_double_value):
     if list_with_double_value[i] > 9:
         list_with_double_value[i] -= 9
 
 total_sum = sum(list_with_double_value + list_with_reserved_numbers2)
 
 if total_sum % 10 == 0:
-    print("Credit card with this number exist")
+    print("Credit card with this number exists")
 elif total_sum % 10 != 0:
     print("Credit card with this number does not exist ")
