@@ -1,8 +1,8 @@
 """Module providing a function printing python version."""
 
 
-def count_the_number_of_letter(line):
-    """Count the number of letters without last letter."""
+def count_the_number_of_letters(line):
+    """Count the number of letters."""
     counter = 1
     answer = []
     for i in range(1, len(line)):
@@ -14,11 +14,7 @@ def count_the_number_of_letter(line):
             else:
                 answer.append(line[i - 1])
             counter = 1
-    return count_last_letter(line, answer, counter)
 
-
-def count_last_letter(line, answer, counter):
-    """Count last letter."""
     if counter > 1:
         answer.append(line[-1] + str(counter))
     else:
@@ -26,8 +22,13 @@ def count_last_letter(line, answer, counter):
     return "".join(answer)
 
 
-assert count_the_number_of_letter("cccbba") == "c3b2a"
-assert count_the_number_of_letter("abeehhhhhccced") == "abe2h5c3ed"
-assert count_the_number_of_letter("aaabbceedd") == "a3b2ce2d2"
-assert count_the_number_of_letter("abcde") == "abcde"
-assert count_the_number_of_letter("aaabbdefffff") == "a3b2def5"
+assert count_the_number_of_letters("cccbba") == "c3b2a", \
+    "Function with input value 'cccbba', not equal 'c3b2a'."
+assert count_the_number_of_letters("abeehhhhhccced") == "abe2h5c3ed", \
+    "Function with input value 'abeehhhhhccced', not equal 'abe2h5c3ed'."
+assert count_the_number_of_letters("aaabbceedd") == "a3b2ce2d2", \
+    "Function with input value 'aaabbceedd', not equal 'a3b2ce2d2'."
+assert count_the_number_of_letters("abcde") == "abcde", \
+    "Function with input value 'abcde', not equal 'abcde'."
+assert count_the_number_of_letters("aaabbdefffff") == "a3b2def5",  \
+    "Function with input value 'aaabbdefffff', not equal 'a3b2def5'."
