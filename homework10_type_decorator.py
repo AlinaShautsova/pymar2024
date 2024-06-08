@@ -1,4 +1,4 @@
-"""Module contains a solution to the task: 'Type Decorator'."""
+"""Module contains a solution to the task: type decorator."""
 
 
 def typed(type1):

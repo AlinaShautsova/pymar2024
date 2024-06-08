@@ -1,9 +1,8 @@
-"""Module contains a solution to the task: 'Positive function arguments'."""
+"""Module contains a solution to the task: positive function arguments."""
 
 
 def validate_arguments(func):
     """Validate arguments."""
-
     def wrapper(*args):
         """Check variable is a number or not, and positive or not."""
         for arg in args:
@@ -11,7 +10,6 @@ def validate_arguments(func):
                 raise ValueError(f"{arg} variable is not a number "
                                  f"or not positive.")
         return func(*args)
-
     return wrapper
 
 

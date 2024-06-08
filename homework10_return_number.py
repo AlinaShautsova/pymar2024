@@ -1,4 +1,4 @@
-"""Module contains a solution to the task: 'Return number'."""
+"""Module contains a solution to the task: return number."""
 
 
 def result_of_function_is_number(func):
@@ -9,18 +9,19 @@ def result_of_function_is_number(func):
         if not isinstance(result, (int, float)):
             print(f"Error: This is {result} not a number")
             return result
-        else:
-            return result
+        return result
     return wrapper
 
 
 @result_of_function_is_number
 def checking(a):
+    """Return the input argument."""
     return a
 
 
 @result_of_function_is_number
 def checking2(word):
+    """Return a greeting message."""
     return f"Hello, {word}!"
 
 
