@@ -2,6 +2,7 @@
 
 
 class Book:
+    """This class include function for initializes."""
     def __init__(self, title, author, number_of_pages, isbn):
         """Function initializes a new instance of the Book class. """
         self.title = title
@@ -13,13 +14,15 @@ class Book:
 
 
 class User:
+    """This class include 4 functions for initializes, for reserve, take and
+     return the book."""
     def __init__(self, name):
         """Function initializes a new instance of the User class. """
         self.name = name
 
     def reserve_the_book(self, book):
-        """This function is reserved the book and print a message, if the book is already taken
-        or reserved or if you reserved the book."""
+        """This function is reserved the book and print a message, if the book
+         is already taken or reserved or if you reserved the book."""
         if book.took_by:
             print(f"This book {book.title} has already been taken by"
                   f" {book.took_by}.")
@@ -37,7 +40,8 @@ class User:
             print(f"This book {book.title} has already been taken by"
                   f" {book.took_by}.")
         elif book.reserved_by and book.reserved_by != self.name:
-            print(f"This book {book.title} was reserved by {book.reserved_by}.")
+            print(f"This book {book.title} was reserved by "
+                  f"{book.reserved_by}.")
         else:
             book.took_by = self.name
             book.reserved_by = ""
