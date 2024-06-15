@@ -2,7 +2,8 @@
 
 
 class Book:
-    """This class include function for initializes."""
+    """This class include functions for initializes, getting details, checks
+     reserved or taken."""
     def __init__(self, title, author, number_of_pages, isbn):
         """Function initializes a new instance of the Book class. """
         self.title = title
@@ -11,6 +12,19 @@ class Book:
         self.isbn = isbn
         self.reserved_by = ""
         self.took_by = ""
+
+    def get_details(self):
+        """Returns a string with the book's details."""
+        return (f"Title: {self.title}, Author: {self.author},"
+                f" Pages: {self.number_of_pages}, ISBN: {self.isbn}")
+
+    def is_reserved(self):
+        """Returns True if the book is reserved, False otherwise."""
+        return bool(self.reserved_by)
+
+    def is_taken(self):
+        """Returns True if the book is taken, False otherwise."""
+        return bool(self.took_by)
 
 
 class User:

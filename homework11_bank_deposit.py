@@ -2,8 +2,8 @@
 
 
 class Deposit:
-    """This class include 2 functions for initializes and for calculation
-    total amount."""
+    """This class include functions for initializes, for calculation
+    total amount. """
     def __init__(self, sum_of_deposit, deposit_term, annual_rate=10):
         """Function initializes a new instance of the Deposit class."""
         self.sum_of_deposit = sum_of_deposit
@@ -12,7 +12,8 @@ class Deposit:
 
     def final_amount(self):
         """Function calculate the total deposit amount taking into account
-        the monthly capitalization."""
+        the monthly capitalization. And functions for returns: deposit amount,
+        the deposit term in years, the annual interest rate."""
         months = self.deposit_term * 12
         monthly_rate = self.annual_rate / 12 / 100
         final_amount1 = self.sum_of_deposit
@@ -20,6 +21,18 @@ class Deposit:
         for _ in range(months):
             final_amount1 += final_amount1 * monthly_rate
         return final_amount1
+
+    def get_sum_of_deposit(self):
+        """Returns the initial deposit amount."""
+        return self.sum_of_deposit
+
+    def get_deposit_term(self):
+        """Returns the deposit term in years."""
+        return self.deposit_term
+
+    def get_annual_rate(self):
+        """Returns the annual interest rate."""
+        return self.annual_rate
 
 
 class Bank:
@@ -42,6 +55,7 @@ class Bank:
         if user1 in self.user_accounts:
             amount = self.user_accounts.pop(user1)
             return amount
+        return 0
 
 
 bank = Bank()
