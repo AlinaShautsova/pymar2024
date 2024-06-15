@@ -23,8 +23,8 @@ class Deposit:
 
 
 class Bank:
-    """This class include 4 functions for initializes, for takes deposit,
-    return and withdraw the deposit amount."""
+    """This class include 3 functions for initializes, for takes deposit and
+    withdraw the deposit amount."""
     def __init__(self):
         """Function initializes a new instance of the Bank class."""
         self.user_accounts = {}
@@ -37,18 +37,11 @@ class Bank:
         self.user_accounts[user1] = final_amount1
         return final_amount1
 
-    def refund_of_amount(self, user1):
-        """Returns the deposit amount for the user."""
-        if user1 in self.user_accounts:
-            return self.user_accounts[user1]
-
     def withdraw(self, user1):
         """Function withdraws the deposit amount for the user."""
         if user1 in self.user_accounts:
             amount = self.user_accounts.pop(user1)
             return amount
-        else:
-            return f"The user {user1} doesn't have deposit."
 
 
 bank = Bank()
@@ -59,9 +52,6 @@ YEARS = 2
 final_amount = bank.deposit(USER, INITIAL_AMOUNT, YEARS)
 print(f"Total invoice amount {USER} after {YEARS} years: {final_amount:.2f} "
       f"euro.")
-
-refund_amount = bank.refund_of_amount(USER)
-print(f"User deposit amount {USER}: {refund_amount:.2f} euro.")
 
 withdrawn_amount = bank.withdraw(USER)
 if isinstance(withdrawn_amount, float):
