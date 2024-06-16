@@ -22,7 +22,7 @@ class Deposit:
             final_amount1 += final_amount1 * monthly_rate
         return final_amount1
 
-    def get_sum_of_deposit(self):
+    def get_deposit_amount(self):
         """Returns the initial deposit amount."""
         return self.sum_of_deposit
 
