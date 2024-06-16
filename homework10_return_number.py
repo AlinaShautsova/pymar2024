@@ -8,7 +8,6 @@ def result_of_function_is_number(func):
         result = func(*args, **kwargs)
         if not isinstance(result, (int, float)):
             print(f"Error: This is {result} not a number")
-            return result
         return result
     return wrapper
 

@@ -7,9 +7,7 @@ def typed(type1):
         """Function accepts the function to be decorated."""
         def wrapper(*args):
             """Function change type of arguments and execute main function."""
-            new_args = []
-            for arg in args:
-                new_args.append(type1(arg))
+            new_args = list(map(type1, args))
             return func(*new_args)
         return wrapper
     return decorator
