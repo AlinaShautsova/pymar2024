@@ -1,4 +1,4 @@
-"""Module contains a solution to the task: Card deck."""
+"""Module contains a solution to the (card deck) task."""
 import random
 
 
@@ -38,12 +38,10 @@ class DeckCards:
         """Mix deck."""
         random.shuffle(self.cards)
 
-    def get(self, card_number1):
+    def get(self, card_number):
         """Return number of card from 1 to 54."""
         if 1 <= card_number <= 54:
             return self.cards[card_number - 1]
-        else:
-            return "You entered the wrong card number"
 
 
 deck = DeckCards()
