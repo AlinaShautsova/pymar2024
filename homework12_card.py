@@ -48,6 +48,7 @@ class DeckCards:
 deck = DeckCards()
 deck.mix()
 
-card_number1 = int(input('Enter the card number from the deck(from 1 to 54): '))
+card_number1 = int(input('Enter the card number from the deck(from 1 to 54):'
+                         ' '))
 card = deck.get(card_number1)
 print(f'Your card is: {card}')
