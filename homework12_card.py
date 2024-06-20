@@ -42,11 +42,12 @@ class DeckCards:
         """Return number of card from 1 to 54."""
         if 1 <= card_number <= 54:
             return self.cards[card_number - 1]
+        return None
 
 
 deck = DeckCards()
 deck.mix()
 
-card_number = int(input('Enter the card number from the deck(from 1 to 54): '))
-card = deck.get(card_number)
+card_number1 = int(input('Enter the card number from the deck(from 1 to 54): '))
+card = deck.get(card_number1)
 print(f'Your card is: {card}')
