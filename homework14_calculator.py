@@ -18,15 +18,12 @@ def main():
     print("Enter the expression you want to calculate . Enter "
           "'exit' if you want to exit.")
     while True:
-        try:
-            user_input = input("~ ")
-            if user_input.lower() == 'exit':
-                print("Program completed.")
-                break
-            result = calculator(user_input)
-            print(f"Result: {result}")
-        except Exception as a:
-            print(f"Error: {a}")
+        user_input = input("~ ")
+        if user_input.lower() == 'exit':
+            print("Program completed.")
+            break
+        result = calculator(user_input)
+        print(f"Result: {result}")
 
 
 if __name__ == "__main__":
