@@ -31,8 +31,8 @@ class DeckCards:
             for number in numbers:
                 self.cards.append(Card(number, suit))
 
-        self.cards.append(Card(14, "Joker"))
-        self.cards.append(Card(15, "Joker"))
+        self.cards.append(Card("Red", "Joker"))
+        self.cards.append(Card("Black", "Joker"))
 
     def mix(self):
         """Mix deck."""

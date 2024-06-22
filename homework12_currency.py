@@ -75,7 +75,7 @@ class Bank:
 
     def exchange_currency(self, amount, from_currency, to_currency='BYN'):
         """Function converts money from one currency to another."""
-        if from_currency == "BYN":
+        if from_currency == to_currency:
             answer = amount
         else:
             amount_in_byn = amount * self.exchange_rates[from_currency]
