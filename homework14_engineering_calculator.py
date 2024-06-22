@@ -30,8 +30,8 @@ def calculate(numbers, operators):
     if len(numbers) != len(operators) + 1:
         raise ValueError("Invalid expression format")
     result = numbers[0]
-    for i in range(len(operators)):
-        operation = operations[operators[i]]
+    for i, v in enumerate(operators):
+        operation = operations[v]
         result = operation(result, numbers[i + 1])
     return result
 
