@@ -1,0 +1,5 @@
+{"name": "Kate", "group": "Group1", "marks": [7, 8, 9]}
+{"name": "Fedor", "group": "Group2", "marks": [8, 7, 7]}
+{"name": "Lena", "group": "Group3", "marks": [9, 9, 7]}
+{"name": "Nika", "group": "Group3", "marks": [7, 6, 9]}
+{"name": "Misha", "group": "Group2", "marks": [6, 9, 7]}
