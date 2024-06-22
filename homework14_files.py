@@ -1,17 +1,14 @@
 """Module contains a solution to the task: files."""
 import json
+import sys
 try:
-    with open('students.txt', 'r') as file:
-        content = file.read()
-        content = content.split('\n')
+    with open('students.txt', 'r', encoding='utf-8') as file:
+        content = file.readlines()
         amount_of_students = len(content)
         print(f"Total number of students: {amount_of_students}")
 except FileNotFoundError:
-    print(f"File not found. Exiting program.")
-    exit(1)
-except Exception as e:
-    print(f"Error reading file: {e}")
-    exit(1)
+    print("File not found. Exiting program.")
+    sys.exit(1)
 
 
 def counter():
@@ -38,6 +35,6 @@ def counter():
     return dictionary_counter
 
 
-with open('students.txt', 'a') as file:
+with open('students.txt', 'a', encoding='utf-8') as file:
     file.write(f"\nTotal number of students: {amount_of_students}\n")
     file.write(str(counter()))
