@@ -58,5 +58,4 @@ def main():
             print("Error: Can't divide by 0.")
 
 
-if __name__ == "__main__":
-    main()
+main()
