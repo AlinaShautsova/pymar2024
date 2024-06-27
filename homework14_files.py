@@ -6,7 +6,7 @@ import json
 def create_new_file(new_file):
     """Create the file if it does not exist."""
     if not os.path.exists(new_file):
-        with (open(new_file, "w", encoding='utf-8') as file):
+        with open(new_file, "w", encoding='utf-8') as file:
             students = ('[["Kate", "Group1", [7, 8, 9]],\n'
                         '["Fedor", "Group2", [8, 7, 7]],\n'
                         '["Lena", "Group3", [9, 9, 7]],\n'
@@ -52,8 +52,8 @@ def add_result_info(file_name, info_to_write):
 create_new_file("students.txt")
 
 content_from_file = open_and_read("students.txt")
-combined_string_from_file = "".join(content_from_file).replace('\n', '')
-list_of_content = json.loads(combined_string_from_file)
+COMBINED_STRING_FROM_FILE = "".join(content_from_file).replace('\n', '')
+list_of_content = json.loads(COMBINED_STRING_FROM_FILE)
 
 amount_of_students = len(content_from_file)
 
