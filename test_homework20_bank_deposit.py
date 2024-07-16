@@ -19,6 +19,7 @@ logger.setLevel(logging.INFO)
 
 class TestBank(unittest.TestCase):
     """Test cases for the bank class deposit method."""
+
     def setUp(self):
         """Set up the test environment."""
         logger.info("Assign variables.")
@@ -42,7 +43,7 @@ class TestBank(unittest.TestCase):
     def test_deposit_initialization(self):
         """Testing deposit initialization."""
         logger.info("Testing deposit initialization.")
-        logger.debug(f"Deposit details: {self.deposit}")
+        logger.debug("Deposit details: %s", self.deposit)
         self.assertEqual(self.deposit.get_deposit_amount(),
                          self.initial_amount)
         self.assertEqual(self.deposit.get_deposit_term(), self.years)
@@ -52,7 +53,7 @@ class TestBank(unittest.TestCase):
         """Testing actual final amount the same as expected final amount."""
         logger.info("Testing final amount.")
         actual_final_amount = self.deposit.final_amount()
-        logger.debug(f"Final amount1: {actual_final_amount}")
+        logger.debug("Final amount1: %f", actual_final_amount)
         expected_final_amount = 100 * (1 + 10 / 12 / 100) ** (2 * 12)
         self.assertAlmostEqual(actual_final_amount, expected_final_amount,
                                places=2)
@@ -62,7 +63,8 @@ class TestBank(unittest.TestCase):
         logger.info("Testing bank deposit.")
         final_amount = self.bank.deposit(self.user, self.initial_amount,
                                          self.years)
-        logger.debug(f"User {self.user} final amount1: {final_amount}")
+        logger.debug("User %s final amount1: %f", self.user,
+                     final_amount)
         self.assertIn(self.user, self.bank.user_accounts)
         self.assertAlmostEqual(self.bank.user_accounts[self.user],
                                final_amount, places=2)
@@ -72,7 +74,8 @@ class TestBank(unittest.TestCase):
         logger.info("Testing: the bank to withdraw the amount.")
         self.bank.deposit(self.user, self.initial_amount, self.years)
         withdrawn_amount = self.bank.withdraw(self.user)
-        logger.debug(f"User {self.user} withdrawn amount: {withdrawn_amount}")
+        logger.debug("User %s withdrawn amount: %f", self.user,
+                     withdrawn_amount)
         self.assertNotIn(self.user, self.bank.user_accounts)
         self.assertAlmostEqual(withdrawn_amount, self.deposit.final_amount(),
                                places=2)
@@ -80,19 +83,20 @@ class TestBank(unittest.TestCase):
     def test_bank_withdraw_secondary_user(self):
         """Testing the user2 tries to withdraw amount from the user1's
         account."""
-        logger.info("Testing the user2 tries to withdraw amount not from his"
+        logger.info("Testing: the user2 tries to withdraw amount not from his"
                     " account.")
         self.bank.deposit(self.user, self.initial_amount, self.years)
         withdrawn_amount = self.bank.withdraw(self.user2)
-        logger.debug(f"User2 {self.user2} withdrawn amount: "
-                     f"{withdrawn_amount}")
+        logger.debug("User2 %s withdrawn amount: %f", self.user2,
+                     withdrawn_amount)
         self.assertNotEqual(self.initial_amount, withdrawn_amount)
 
     def test_bank_withdraw_nonexistent_user(self):
         """Testing bank withdraw for nonexistent user."""
-        logger.info("Testing bank withdraw for nonexistent user.")
+        logger.info("Testing: bank withdraw for nonexistent user.")
         withdrawn_amount = self.bank.withdraw("NonexistentUser")
-        logger.debug(f"Nonexistent user withdrawn amount: {withdrawn_amount}")
+        logger.debug("Nonexistent user withdrawn amount: %f",
+                     withdrawn_amount)
         self.assertEqual(withdrawn_amount, 0)
 
     def test_initial_amount_less_final_amount(self):
@@ -100,8 +104,8 @@ class TestBank(unittest.TestCase):
         logger.info("Testing that the initial amount is less than the "
                     "final amount.")
         final_amount = self.deposit.final_amount()
-        logger.debug(f"Initial amount: {self.initial_amount}, more than "
-                     f"final amount: {final_amount}")
+        logger.debug("Initial amount: %f, final amount: %f",
+                     self.initial_amount, final_amount)
         self.assertLess(self.initial_amount, final_amount)
 
 
