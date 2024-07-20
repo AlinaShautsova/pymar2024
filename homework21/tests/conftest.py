@@ -1,4 +1,4 @@
-"""Fixture for homework21: bank deposit, library."""
+"""Contest for Homework 11: bank deposit, library."""
 import pytest
 
 from homework21.source.homework11_bank_deposit import Bank, Deposit
@@ -34,7 +34,7 @@ def setup_deposit(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_user1(logger):
+def setup_user1_bank(logger):
     """Set up the test environment."""
     logger.info("Setting up the User1 instance.")
     user1 = "Petya"
@@ -44,7 +44,7 @@ def setup_user1(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_user2(logger):
+def setup_user2_bank(logger):
     """Set up the test environment."""
     logger.info("Setting up the User2 instance.")
     user2 = "Katya"
@@ -83,3 +83,23 @@ def setup_book(logger):
     yield book
     logger.info("Tearing down the Book instance.")
     del book
+
+
+@pytest.fixture(scope="function")
+def setup_user1_library(logger):
+    """Set up the test environment."""
+    logger.info("Create user1 name.")
+    user1 = User("Kate")
+    yield user1
+    logger.info("Tearing down the User1 instance.")
+    del user1
+
+
+@pytest.fixture(scope="function")
+def setup_user2_library(logger):
+    """Set up the test environment."""
+    logger.info("Create user2 name.")
+    user2 = User("Ira")
+    yield user2
+    logger.info("Tearing down the User2 instance.")
+    del user2

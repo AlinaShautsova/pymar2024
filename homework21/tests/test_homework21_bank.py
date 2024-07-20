@@ -21,40 +21,40 @@ def test_final_amount(setup_deposit, logger):
     assert round(actual_final_amount, 2) == round(expected_final_amount, 2)
 
 
-def test_bank_deposit(setup_bank, setup_user1, setup_initial_amount,
+def test_bank_deposit(setup_bank, setup_user1_bank, setup_initial_amount,
                       setup_years, logger):
     """Testing bank deposit."""
     logger.info("Testing bank deposit.")
-    final_amount = setup_bank.deposit(setup_user1, setup_initial_amount,
+    final_amount = setup_bank.deposit(setup_user1_bank, setup_initial_amount,
                                       setup_years)
-    logger.debug("User %s final amount1: %f", setup_user1,
+    logger.debug("User %s final amount1: %f", setup_user1_bank,
                  final_amount)
-    assert setup_user1 in setup_bank.user_accounts
-    assert (round(setup_bank.user_accounts[setup_user1], 2) ==
+    assert setup_user1_bank in setup_bank.user_accounts
+    assert (round(setup_bank.user_accounts[setup_user1_bank], 2) ==
             round(final_amount, 2))
 
 
-def test_bank_withdraw(setup_deposit, setup_bank, setup_user1,
+def test_bank_withdraw(setup_deposit, setup_bank, setup_user1_bank,
                        setup_initial_amount, setup_years, logger):
     """Testing the bank to withdraw the amount."""
     logger.info("Testing: the bank to withdraw the amount.")
-    setup_bank.deposit(setup_user1, setup_initial_amount, setup_years)
-    withdrawn_amount = setup_bank.withdraw(setup_user1)
-    logger.debug("User %s withdrawn amount: %f", setup_user1,
+    setup_bank.deposit(setup_user1_bank, setup_initial_amount, setup_years)
+    withdrawn_amount = setup_bank.withdraw(setup_user1_bank)
+    logger.debug("User %s withdrawn amount: %f", setup_user1_bank,
                  withdrawn_amount)
-    assert setup_user1 not in setup_bank.user_accounts
+    assert setup_user1_bank not in setup_bank.user_accounts
     assert round(withdrawn_amount, 2) == round(setup_deposit.final_amount(), 2)
 
 
-def test_bank_withdraw_secondary_user(setup_bank, setup_user1, setup_years,
-                                      setup_initial_amount, setup_user2,
-                                      logger):
+def test_bank_withdraw_secondary_user(setup_bank, setup_user1_bank,
+                                      setup_years, setup_initial_amount,
+                                      setup_user2_bank, logger):
     """Testing the user2 tries to withdraw amount from the user1's account."""
     logger.info("Testing the user2 tries to withdraw amount not from his "
                 "account.")
-    setup_bank.deposit(setup_user1, setup_initial_amount, setup_years)
-    withdrawn_amount = setup_bank.withdraw(setup_user2)
-    logger.debug("User2 %s withdrawn amount: %f", setup_user2,
+    setup_bank.deposit(setup_user1_bank, setup_initial_amount, setup_years)
+    withdrawn_amount = setup_bank.withdraw(setup_user2_bank)
+    logger.debug("User2 %s withdrawn amount: %f", setup_user2_bank,
                  withdrawn_amount)
     assert setup_initial_amount != (withdrawn_amount, 2)
 
