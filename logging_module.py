@@ -1,9 +1,9 @@
 import logging
 
 
-def setup_logging(file_name):
+def setup_logging():
     formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s')
-    file_handler = logging.FileHandler(file_name)
+    file_handler = logging.FileHandler('pytest.log')
     file_handler.setFormatter(formatter)
 
     console_handler = logging.StreamHandler()

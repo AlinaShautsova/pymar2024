@@ -1,46 +1,5 @@
 """Pytest for Homework 11: library."""
 import pytest
-from homework21.source.homework11_library import Book, User
-from logging_module import setup_logging
-
-
-@pytest.fixture(scope="session", autouse=True)
-def logger():
-    """Set up logger."""
-    logger = setup_logging('test_library.log')
-    return logger
-    
-    
-@pytest.fixture(scope="function")
-def setup_book(logger):
-    """Set up the test environment."""
-    logger.info("Create a book with these parameters: title, author, "
-                "number of pages, isbn.")
-    book = Book("Harry Potter", "Joanne Rowling",
-                500, "932-994-555")
-    yield book
-    logger.info("Tearing down the Book instance.")
-    del book
-
-
-@pytest.fixture(scope="function")
-def setup_user1(logger):
-    """Set up the test environment."""
-    logger.info("Create user1 name.")
-    user1 = User("Kate")
-    yield user1
-    logger.info("Tearing down the User1 instance.")
-    del user1
-
-
-@pytest.fixture(scope="function")
-def setup_user2(logger):
-    """Set up the test environment."""
-    logger.info("Create user2 name.")
-    user2 = User("Ira")
-    yield user2
-    logger.info("Tearing down the User2 instance.")
-    del user2
 
 
 def test_book_initialization(setup_book, logger):
