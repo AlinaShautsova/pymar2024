@@ -1,4 +1,4 @@
-"""Contest for Homework 11: bank deposit, library."""
+"""Contest for Homework 21. Task : bank deposit, task : library."""
 import pytest
 
 from homework21.source.homework11_bank_deposit import Bank, Deposit
