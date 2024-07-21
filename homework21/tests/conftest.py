@@ -6,15 +6,11 @@ from homework21.source.homework11_library import Book, User
 from logging_module import setup_logging
 
 
-@pytest.fixture(scope="session", autouse=True)
-def logger():
-    """Set up logger."""
-    logger = setup_logging()
-    return logger
+logger = setup_logging()
 
 
 @pytest.fixture(scope="function")
-def setup_bank(logger):
+def setup_bank():
     """Set up the test environment."""
     logger.info("Setting up the Bank instance.")
     bank = Bank()
@@ -24,7 +20,7 @@ def setup_bank(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_deposit(logger):
+def setup_deposit():
     """Set up the test environment."""
     logger.info("Setting up the Deposit instance.")
     deposit = Deposit(100, 2)
@@ -34,7 +30,7 @@ def setup_deposit(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_user1_bank(logger):
+def setup_user1_bank():
     """Set up the test environment."""
     logger.info("Setting up the User1 instance.")
     user1 = "Petya"
@@ -44,7 +40,7 @@ def setup_user1_bank(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_user2_bank(logger):
+def setup_user2_bank():
     """Set up the test environment."""
     logger.info("Setting up the User2 instance.")
     user2 = "Katya"
@@ -54,7 +50,7 @@ def setup_user2_bank(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_initial_amount(logger):
+def setup_initial_amount():
     """Set up the test environment."""
     logger.info("Setting up the Initial amount instance.")
     initial_amount = 100
@@ -64,7 +60,7 @@ def setup_initial_amount(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_years(logger):
+def setup_years():
     """Set up the test environment."""
     logger.info("Setting up years instance.")
     years = 2
@@ -74,7 +70,7 @@ def setup_years(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_book(logger):
+def setup_book():
     """Set up the test environment."""
     logger.info("Create a book with these parameters: title, author, "
                 "number of pages, isbn.")
@@ -86,7 +82,7 @@ def setup_book(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_user1_library(logger):
+def setup_user1_library():
     """Set up the test environment."""
     logger.info("Create user1 name.")
     user1 = User("Kate")
@@ -96,7 +92,7 @@ def setup_user1_library(logger):
 
 
 @pytest.fixture(scope="function")
-def setup_user2_library(logger):
+def setup_user2_library():
     """Set up the test environment."""
     logger.info("Create user2 name.")
     user2 = User("Ira")
