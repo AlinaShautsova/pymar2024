@@ -1,20 +1,10 @@
 """Unittest for Homework 11: bank deposit."""
-
 import unittest
-import logging
+
 from homework11_bank_deposit import Deposit, Bank
+from logging_module import setup_logging
 
-formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s')
-file_handler = logging.FileHandler('test_bank.log')
-file_handler.setFormatter(formatter)
-
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(formatter)
-
-logger = logging.getLogger(__name__)
-logger.addHandler(file_handler)
-logger.addHandler(console_handler)
-logger.setLevel(logging.INFO)
+logger = setup_logging()
 
 
 class TestBank(unittest.TestCase):

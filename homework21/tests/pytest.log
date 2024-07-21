@@ -1,0 +1,472 @@
+[2024-07-20 20:49:10,063] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,066] INFO - Testing: book initialization.
+[2024-07-20 20:49:10,068] DEBUG - Book details: Book Harry Potter, Joanne Rowling, 500, 932-994-555, , 
+[2024-07-20 20:49:10,071] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,074] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,075] INFO - Testing: get_details method.
+[2024-07-20 20:49:10,075] DEBUG - Book details: Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555
+[2024-07-20 20:49:10,078] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,084] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,087] INFO - Create user1 name.
+[2024-07-20 20:49:10,089] INFO - Testing: is_reserved method. Check whether the user can reserve an already reserved book or not.
+[2024-07-20 20:49:10,089] DEBUG - Book reserved: False
+[2024-07-20 20:49:10,092] DEBUG - Book reserved after reserving: True
+[2024-07-20 20:49:10,094] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,095] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,098] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,098] INFO - Create user1 name.
+[2024-07-20 20:49:10,099] INFO - Create user2 name.
+[2024-07-20 20:49:10,100] INFO - Testing: user2 wants to reserve a book that user1 has already reserved.
+[2024-07-20 20:49:10,100] DEBUG - Book reserved_by: Kate
+[2024-07-20 20:49:10,100] DEBUG - Book reserved_by after second attempt: Kate
+[2024-07-20 20:49:10,103] INFO - Tearing down the User2 instance.
+[2024-07-20 20:49:10,103] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,104] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,106] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,106] INFO - Create user1 name.
+[2024-07-20 20:49:10,107] INFO - Testing: is_taken method. Check whether the user can take an already taken book or not.
+[2024-07-20 20:49:10,108] DEBUG - Book taken: False
+[2024-07-20 20:49:10,108] DEBUG - Book taken after taking: True
+[2024-07-20 20:49:10,110] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,111] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,114] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,115] INFO - Create user1 name.
+[2024-07-20 20:49:10,116] INFO - Create user2 name.
+[2024-07-20 20:49:10,117] INFO - Testing: take_book method. User2 tries to take a book that user1 has already taken.
+[2024-07-20 20:49:10,117] DEBUG - Book took_by: Kate
+[2024-07-20 20:49:10,118] DEBUG - Book took_by after second attempt: Kate
+[2024-07-20 20:49:10,119] INFO - Tearing down the User2 instance.
+[2024-07-20 20:49:10,120] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,120] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,123] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,124] INFO - Create user1 name.
+[2024-07-20 20:49:10,124] INFO - Create user2 name.
+[2024-07-20 20:49:10,125] INFO - Testing: user2 wants to reserve a book that user1 has already taken.
+[2024-07-20 20:49:10,126] DEBUG - Book took_by: Kate
+[2024-07-20 20:49:10,126] DEBUG - Book reserved_by after it was taken by another user: Kate
+[2024-07-20 20:49:10,127] INFO - Tearing down the User2 instance.
+[2024-07-20 20:49:10,128] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,128] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,133] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,134] INFO - Create user1 name.
+[2024-07-20 20:49:10,134] INFO - Create user2 name.
+[2024-07-20 20:49:10,136] INFO - Testing: user2 wants to take a book that user1 has already reserved.
+[2024-07-20 20:49:10,136] DEBUG - Book reserved_by: Kate
+[2024-07-20 20:49:10,136] DEBUG - Book take by after it was reserved_by another user: Kate
+[2024-07-20 20:49:10,139] INFO - Tearing down the User2 instance.
+[2024-07-20 20:49:10,139] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,140] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,143] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,143] INFO - Create user1 name.
+[2024-07-20 20:49:10,147] INFO - Testing: return_book method. Check if the book can be returned.
+[2024-07-20 20:49:10,148] DEBUG - Book took_by after returning: 
+[2024-07-20 20:49:10,150] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,151] INFO - Tearing down the Book instance.
+[2024-07-20 20:49:10,158] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-20 20:49:10,164] INFO - Create user1 name.
+[2024-07-20 20:49:10,165] INFO - Create user2 name.
+[2024-07-20 20:49:10,166] INFO - Testing: user2 is trying to return the book that the user1 took.
+[2024-07-20 20:49:10,167] DEBUG - Book was not returned_by after it was taken by another user: Kate
+[2024-07-20 20:49:10,168] INFO - Tearing down the User2 instance.
+[2024-07-20 20:49:10,169] INFO - Tearing down the User1 instance.
+[2024-07-20 20:49:10,169] INFO - Tearing down the Book instance.
+[2024-07-20 21:07:52,886] INFO - Setting up the Deposit instance.
+[2024-07-20 21:07:52,889] INFO - Testing deposit initialization.
+[2024-07-20 21:07:52,889] DEBUG - Deposit details: <homework21.source.homework11_bank_deposit.Deposit object at 0x000001BE87B826C0>
+[2024-07-20 21:07:52,891] INFO - Tearing down the Deposit instance.
+[2024-07-20 21:07:52,896] INFO - Setting up the Deposit instance.
+[2024-07-20 21:07:52,898] INFO - Testing final amount.
+[2024-07-20 21:07:52,899] DEBUG - Final amount1: 122.039096
+[2024-07-20 21:07:52,900] INFO - Tearing down the Deposit instance.
+[2024-07-20 21:07:52,902] INFO - Setting up the Bank instance.
+[2024-07-20 21:07:52,902] INFO - Setting up the User1 instance.
+[2024-07-20 21:07:52,903] INFO - Setting up the Initial amount instance.
+[2024-07-20 21:07:52,903] INFO - Setting up years instance.
+[2024-07-20 21:07:52,904] INFO - Testing bank deposit.
+[2024-07-20 21:07:52,904] DEBUG - User Petya final amount1: 122.039096
+[2024-07-20 21:07:52,905] INFO - Tearing down years instance.
+[2024-07-20 21:07:52,905] INFO - Tearing down the Initial amount instance.
+[2024-07-20 21:07:52,906] INFO - Tearing down the User1 instance.
+[2024-07-20 21:07:52,906] INFO - Tearing down the Bank instance.
+[2024-07-20 21:07:52,911] INFO - Setting up the Deposit instance.
+[2024-07-20 21:07:52,911] INFO - Setting up the Bank instance.
+[2024-07-20 21:07:52,911] INFO - Setting up the User1 instance.
+[2024-07-20 21:07:52,912] INFO - Setting up the Initial amount instance.
+[2024-07-20 21:07:52,912] INFO - Setting up years instance.
+[2024-07-20 21:07:52,913] INFO - Testing: the bank to withdraw the amount.
+[2024-07-20 21:07:52,913] DEBUG - User Petya withdrawn amount: 122.039096
+[2024-07-20 21:07:52,914] INFO - Tearing down years instance.
+[2024-07-20 21:07:52,914] INFO - Tearing down the Initial amount instance.
+[2024-07-20 21:07:52,915] INFO - Tearing down the User1 instance.
+[2024-07-20 21:07:52,915] INFO - Tearing down the Bank instance.
+[2024-07-20 21:07:52,915] INFO - Tearing down the Deposit instance.
+[2024-07-20 21:07:52,919] INFO - Setting up the Bank instance.
+[2024-07-20 21:07:52,920] INFO - Setting up the User1 instance.
+[2024-07-20 21:07:52,921] INFO - Setting up years instance.
+[2024-07-20 21:07:52,921] INFO - Setting up the Initial amount instance.
+[2024-07-20 21:07:52,921] INFO - Setting up the User2 instance.
+[2024-07-20 21:07:52,923] INFO - Testing the user2 tries to withdraw amount not from his account.
+[2024-07-20 21:07:52,923] DEBUG - User2 Katya withdrawn amount: 0.000000
+[2024-07-20 21:07:52,924] INFO - Tearing down the User2 instance.
+[2024-07-20 21:07:52,925] INFO - Tearing down the Initial amount instance.
+[2024-07-20 21:07:52,926] INFO - Tearing down years instance.
+[2024-07-20 21:07:52,926] INFO - Tearing down the User1 instance.
+[2024-07-20 21:07:52,926] INFO - Tearing down the Bank instance.
+[2024-07-20 21:07:52,929] INFO - Setting up the Bank instance.
+[2024-07-20 21:07:52,931] INFO - Testing bank withdraw for nonexistent user.
+[2024-07-20 21:07:52,932] DEBUG - Nonexistent user withdrawn amount: 0.000000
+[2024-07-20 21:07:52,933] INFO - Tearing down the Bank instance.
+[2024-07-20 21:07:52,935] INFO - Setting up the Deposit instance.
+[2024-07-20 21:07:52,935] INFO - Setting up the Initial amount instance.
+[2024-07-20 21:07:52,936] INFO - Testing that the initial amount is less than the final amount.
+[2024-07-20 21:07:52,937] DEBUG - Initial amount: 100.000000, final amount: 122.039096
+[2024-07-20 21:07:52,938] INFO - Tearing down the Initial amount instance.
+[2024-07-20 21:07:52,938] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,826] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,826] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,830] INFO - Testing deposit initialization.
+[2024-07-21 20:56:30,830] INFO - Testing deposit initialization.
+[2024-07-21 20:56:30,831] DEBUG - Deposit details: <homework21.source.homework11_bank_deposit.Deposit object at 0x0000028A07E22BD0>
+[2024-07-21 20:56:30,831] DEBUG - Deposit details: <homework21.source.homework11_bank_deposit.Deposit object at 0x0000028A07E22BD0>
+[2024-07-21 20:56:30,839] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,839] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,845] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,845] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,847] INFO - Testing final amount.
+[2024-07-21 20:56:30,847] INFO - Testing final amount.
+[2024-07-21 20:56:30,848] DEBUG - Final amount1: 122.039096
+[2024-07-21 20:56:30,848] DEBUG - Final amount1: 122.039096
+[2024-07-21 20:56:30,851] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,851] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,855] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,855] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,856] INFO - Setting up the User1 instance.
+[2024-07-21 20:56:30,856] INFO - Setting up the User1 instance.
+[2024-07-21 20:56:30,857] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,857] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,858] INFO - Setting up years instance.
+[2024-07-21 20:56:30,858] INFO - Setting up years instance.
+[2024-07-21 20:56:30,859] INFO - Testing bank deposit.
+[2024-07-21 20:56:30,859] INFO - Testing bank deposit.
+[2024-07-21 20:56:30,860] DEBUG - User Petya final amount1: 122.039096
+[2024-07-21 20:56:30,860] DEBUG - User Petya final amount1: 122.039096
+[2024-07-21 20:56:30,861] INFO - Tearing down years instance.
+[2024-07-21 20:56:30,861] INFO - Tearing down years instance.
+[2024-07-21 20:56:30,862] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,862] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,862] INFO - Tearing down the User1 instance.
+[2024-07-21 20:56:30,862] INFO - Tearing down the User1 instance.
+[2024-07-21 20:56:30,863] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,863] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,867] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,867] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,867] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,867] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,867] INFO - Setting up the User1 instance.
+[2024-07-21 20:56:30,867] INFO - Setting up the User1 instance.
+[2024-07-21 20:56:30,868] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,868] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,868] INFO - Setting up years instance.
+[2024-07-21 20:56:30,868] INFO - Setting up years instance.
+[2024-07-21 20:56:30,872] INFO - Testing: the bank to withdraw the amount.
+[2024-07-21 20:56:30,872] INFO - Testing: the bank to withdraw the amount.
+[2024-07-21 20:56:30,872] DEBUG - User Petya withdrawn amount: 122.039096
+[2024-07-21 20:56:30,872] DEBUG - User Petya withdrawn amount: 122.039096
+[2024-07-21 20:56:30,874] INFO - Tearing down years instance.
+[2024-07-21 20:56:30,874] INFO - Tearing down years instance.
+[2024-07-21 20:56:30,875] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,875] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,875] INFO - Tearing down the User1 instance.
+[2024-07-21 20:56:30,875] INFO - Tearing down the User1 instance.
+[2024-07-21 20:56:30,875] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,875] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,876] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,876] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,880] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,880] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,881] INFO - Setting up the User1 instance.
+[2024-07-21 20:56:30,881] INFO - Setting up the User1 instance.
+[2024-07-21 20:56:30,882] INFO - Setting up years instance.
+[2024-07-21 20:56:30,882] INFO - Setting up years instance.
+[2024-07-21 20:56:30,882] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,882] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,883] INFO - Setting up the User2 instance.
+[2024-07-21 20:56:30,883] INFO - Setting up the User2 instance.
+[2024-07-21 20:56:30,886] INFO - Testing the user2 tries to withdraw amount not from his account.
+[2024-07-21 20:56:30,886] INFO - Testing the user2 tries to withdraw amount not from his account.
+[2024-07-21 20:56:30,887] DEBUG - User2 Katya withdrawn amount: 0.000000
+[2024-07-21 20:56:30,887] DEBUG - User2 Katya withdrawn amount: 0.000000
+[2024-07-21 20:56:30,890] INFO - Tearing down the User2 instance.
+[2024-07-21 20:56:30,890] INFO - Tearing down the User2 instance.
+[2024-07-21 20:56:30,891] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,891] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,892] INFO - Tearing down years instance.
+[2024-07-21 20:56:30,892] INFO - Tearing down years instance.
+[2024-07-21 20:56:30,892] INFO - Tearing down the User1 instance.
+[2024-07-21 20:56:30,892] INFO - Tearing down the User1 instance.
+[2024-07-21 20:56:30,892] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,892] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,897] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,897] INFO - Setting up the Bank instance.
+[2024-07-21 20:56:30,899] INFO - Testing bank withdraw for nonexistent user.
+[2024-07-21 20:56:30,899] INFO - Testing bank withdraw for nonexistent user.
+[2024-07-21 20:56:30,901] DEBUG - Nonexistent user withdrawn amount: 0.000000
+[2024-07-21 20:56:30,901] DEBUG - Nonexistent user withdrawn amount: 0.000000
+[2024-07-21 20:56:30,908] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,908] INFO - Tearing down the Bank instance.
+[2024-07-21 20:56:30,913] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,913] INFO - Setting up the Deposit instance.
+[2024-07-21 20:56:30,914] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,914] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:56:30,943] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,943] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:56:30,944] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:56:30,944] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,874] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,874] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,877] INFO - Testing deposit initialization.
+[2024-07-21 20:57:12,877] INFO - Testing deposit initialization.
+[2024-07-21 20:57:12,877] DEBUG - Deposit details: <homework21.source.homework11_bank_deposit.Deposit object at 0x000001C096332540>
+[2024-07-21 20:57:12,877] DEBUG - Deposit details: <homework21.source.homework11_bank_deposit.Deposit object at 0x000001C096332540>
+[2024-07-21 20:57:12,879] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,879] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,882] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,882] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,883] INFO - Testing final amount.
+[2024-07-21 20:57:12,883] INFO - Testing final amount.
+[2024-07-21 20:57:12,883] DEBUG - Final amount1: 122.039096
+[2024-07-21 20:57:12,883] DEBUG - Final amount1: 122.039096
+[2024-07-21 20:57:12,887] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,887] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,890] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,890] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,891] INFO - Setting up the User1 instance.
+[2024-07-21 20:57:12,891] INFO - Setting up the User1 instance.
+[2024-07-21 20:57:12,891] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,891] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,891] INFO - Setting up years instance.
+[2024-07-21 20:57:12,891] INFO - Setting up years instance.
+[2024-07-21 20:57:12,893] INFO - Testing bank deposit.
+[2024-07-21 20:57:12,893] INFO - Testing bank deposit.
+[2024-07-21 20:57:12,893] DEBUG - User Petya final amount1: 122.039096
+[2024-07-21 20:57:12,893] DEBUG - User Petya final amount1: 122.039096
+[2024-07-21 20:57:12,896] INFO - Tearing down years instance.
+[2024-07-21 20:57:12,896] INFO - Tearing down years instance.
+[2024-07-21 20:57:12,896] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,896] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,897] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:12,897] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:12,897] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,897] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,900] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,900] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,900] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,900] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,901] INFO - Setting up the User1 instance.
+[2024-07-21 20:57:12,901] INFO - Setting up the User1 instance.
+[2024-07-21 20:57:12,902] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,902] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,902] INFO - Setting up years instance.
+[2024-07-21 20:57:12,902] INFO - Setting up years instance.
+[2024-07-21 20:57:12,906] INFO - Testing: the bank to withdraw the amount.
+[2024-07-21 20:57:12,906] INFO - Testing: the bank to withdraw the amount.
+[2024-07-21 20:57:12,907] DEBUG - User Petya withdrawn amount: 122.039096
+[2024-07-21 20:57:12,907] DEBUG - User Petya withdrawn amount: 122.039096
+[2024-07-21 20:57:12,908] INFO - Tearing down years instance.
+[2024-07-21 20:57:12,908] INFO - Tearing down years instance.
+[2024-07-21 20:57:12,908] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,908] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,909] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:12,909] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:12,909] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,909] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,910] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,910] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,913] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,913] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,914] INFO - Setting up the User1 instance.
+[2024-07-21 20:57:12,914] INFO - Setting up the User1 instance.
+[2024-07-21 20:57:12,914] INFO - Setting up years instance.
+[2024-07-21 20:57:12,914] INFO - Setting up years instance.
+[2024-07-21 20:57:12,914] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,914] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,915] INFO - Setting up the User2 instance.
+[2024-07-21 20:57:12,915] INFO - Setting up the User2 instance.
+[2024-07-21 20:57:12,918] INFO - Testing the user2 tries to withdraw amount not from his account.
+[2024-07-21 20:57:12,918] INFO - Testing the user2 tries to withdraw amount not from his account.
+[2024-07-21 20:57:12,919] DEBUG - User2 Katya withdrawn amount: 0.000000
+[2024-07-21 20:57:12,919] DEBUG - User2 Katya withdrawn amount: 0.000000
+[2024-07-21 20:57:12,921] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:12,921] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down years instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down years instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,922] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,927] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,927] INFO - Setting up the Bank instance.
+[2024-07-21 20:57:12,931] INFO - Testing bank withdraw for nonexistent user.
+[2024-07-21 20:57:12,931] INFO - Testing bank withdraw for nonexistent user.
+[2024-07-21 20:57:12,932] DEBUG - Nonexistent user withdrawn amount: 0.000000
+[2024-07-21 20:57:12,932] DEBUG - Nonexistent user withdrawn amount: 0.000000
+[2024-07-21 20:57:12,938] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,938] INFO - Tearing down the Bank instance.
+[2024-07-21 20:57:12,942] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,942] INFO - Setting up the Deposit instance.
+[2024-07-21 20:57:12,942] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,942] INFO - Setting up the Initial amount instance.
+[2024-07-21 20:57:12,943] INFO - Testing that the initial amount is less than the final amount.
+[2024-07-21 20:57:12,943] INFO - Testing that the initial amount is less than the final amount.
+[2024-07-21 20:57:12,944] DEBUG - Initial amount: 100.000000, final amount: 122.039096
+[2024-07-21 20:57:12,944] DEBUG - Initial amount: 100.000000, final amount: 122.039096
+[2024-07-21 20:57:12,945] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,945] INFO - Tearing down the Initial amount instance.
+[2024-07-21 20:57:12,946] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:12,946] INFO - Tearing down the Deposit instance.
+[2024-07-21 20:57:30,112] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,112] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,116] INFO - Testing: book initialization.
+[2024-07-21 20:57:30,116] INFO - Testing: book initialization.
+[2024-07-21 20:57:30,116] DEBUG - Book details: Book Harry Potter, Joanne Rowling, 500, 932-994-555, , 
+[2024-07-21 20:57:30,116] DEBUG - Book details: Book Harry Potter, Joanne Rowling, 500, 932-994-555, , 
+[2024-07-21 20:57:30,119] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,119] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,129] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,129] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,134] INFO - Testing: get_details method.
+[2024-07-21 20:57:30,134] INFO - Testing: get_details method.
+[2024-07-21 20:57:30,134] DEBUG - Book details: Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555
+[2024-07-21 20:57:30,134] DEBUG - Book details: Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555
+[2024-07-21 20:57:30,138] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,138] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,141] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,141] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,142] INFO - Create user1 name.
+[2024-07-21 20:57:30,142] INFO - Create user1 name.
+[2024-07-21 20:57:30,147] INFO - Testing: is_reserved method. Check whether the user can reserve an already reserved book or not.
+[2024-07-21 20:57:30,147] INFO - Testing: is_reserved method. Check whether the user can reserve an already reserved book or not.
+[2024-07-21 20:57:30,148] DEBUG - Book reserved: False
+[2024-07-21 20:57:30,148] DEBUG - Book reserved: False
+[2024-07-21 20:57:30,148] DEBUG - Book reserved after reserving: True
+[2024-07-21 20:57:30,148] DEBUG - Book reserved after reserving: True
+[2024-07-21 20:57:30,153] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,153] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,154] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,154] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,157] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,157] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,160] INFO - Create user1 name.
+[2024-07-21 20:57:30,160] INFO - Create user1 name.
+[2024-07-21 20:57:30,161] INFO - Create user2 name.
+[2024-07-21 20:57:30,161] INFO - Create user2 name.
+[2024-07-21 20:57:30,164] INFO - Testing: user2 wants to reserve a book that user1 has already reserved.
+[2024-07-21 20:57:30,164] INFO - Testing: user2 wants to reserve a book that user1 has already reserved.
+[2024-07-21 20:57:30,165] DEBUG - Book reserved_by: Kate
+[2024-07-21 20:57:30,165] DEBUG - Book reserved_by: Kate
+[2024-07-21 20:57:30,167] DEBUG - Book reserved_by after second attempt: Kate
+[2024-07-21 20:57:30,167] DEBUG - Book reserved_by after second attempt: Kate
+[2024-07-21 20:57:30,169] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,169] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,170] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,170] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,170] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,170] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,177] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,177] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,178] INFO - Create user1 name.
+[2024-07-21 20:57:30,178] INFO - Create user1 name.
+[2024-07-21 20:57:30,181] INFO - Testing: is_taken method. Check whether the user can take an already taken book or not.
+[2024-07-21 20:57:30,181] INFO - Testing: is_taken method. Check whether the user can take an already taken book or not.
+[2024-07-21 20:57:30,181] DEBUG - Book taken: False
+[2024-07-21 20:57:30,181] DEBUG - Book taken: False
+[2024-07-21 20:57:30,181] DEBUG - Book taken after taking: True
+[2024-07-21 20:57:30,181] DEBUG - Book taken after taking: True
+[2024-07-21 20:57:30,186] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,186] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,186] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,186] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,190] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,190] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,190] INFO - Create user1 name.
+[2024-07-21 20:57:30,190] INFO - Create user1 name.
+[2024-07-21 20:57:30,191] INFO - Create user2 name.
+[2024-07-21 20:57:30,191] INFO - Create user2 name.
+[2024-07-21 20:57:30,192] INFO - Testing: take_book method. User2 tries to take a book that user1 has already taken.
+[2024-07-21 20:57:30,192] INFO - Testing: take_book method. User2 tries to take a book that user1 has already taken.
+[2024-07-21 20:57:30,193] DEBUG - Book took_by: Kate
+[2024-07-21 20:57:30,193] DEBUG - Book took_by: Kate
+[2024-07-21 20:57:30,193] DEBUG - Book took_by after second attempt: Kate
+[2024-07-21 20:57:30,193] DEBUG - Book took_by after second attempt: Kate
+[2024-07-21 20:57:30,197] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,197] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,200] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,200] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,200] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,200] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,204] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,204] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,205] INFO - Create user1 name.
+[2024-07-21 20:57:30,205] INFO - Create user1 name.
+[2024-07-21 20:57:30,205] INFO - Create user2 name.
+[2024-07-21 20:57:30,205] INFO - Create user2 name.
+[2024-07-21 20:57:30,207] INFO - Testing: user2 wants to reserve a book that user1 has already taken.
+[2024-07-21 20:57:30,207] INFO - Testing: user2 wants to reserve a book that user1 has already taken.
+[2024-07-21 20:57:30,208] DEBUG - Book took_by: Kate
+[2024-07-21 20:57:30,208] DEBUG - Book took_by: Kate
+[2024-07-21 20:57:30,208] DEBUG - Book reserved_by after it was taken by another user: Kate
+[2024-07-21 20:57:30,208] DEBUG - Book reserved_by after it was taken by another user: Kate
+[2024-07-21 20:57:30,209] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,209] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,210] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,210] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,210] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,210] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,213] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,213] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,214] INFO - Create user1 name.
+[2024-07-21 20:57:30,214] INFO - Create user1 name.
+[2024-07-21 20:57:30,214] INFO - Create user2 name.
+[2024-07-21 20:57:30,214] INFO - Create user2 name.
+[2024-07-21 20:57:30,218] INFO - Testing: user2 wants to take a book that user1 has already reserved.
+[2024-07-21 20:57:30,218] INFO - Testing: user2 wants to take a book that user1 has already reserved.
+[2024-07-21 20:57:30,218] DEBUG - Book reserved_by: Kate
+[2024-07-21 20:57:30,218] DEBUG - Book reserved_by: Kate
+[2024-07-21 20:57:30,218] DEBUG - Book take by after it was reserved_by another user: Kate
+[2024-07-21 20:57:30,218] DEBUG - Book take by after it was reserved_by another user: Kate
+[2024-07-21 20:57:30,220] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,220] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,221] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,221] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,221] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,221] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,224] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,224] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,225] INFO - Create user1 name.
+[2024-07-21 20:57:30,225] INFO - Create user1 name.
+[2024-07-21 20:57:30,227] INFO - Testing: return_book method. Check if the book can be returned.
+[2024-07-21 20:57:30,227] INFO - Testing: return_book method. Check if the book can be returned.
+[2024-07-21 20:57:30,228] DEBUG - Book took_by after returning: 
+[2024-07-21 20:57:30,228] DEBUG - Book took_by after returning: 
+[2024-07-21 20:57:30,231] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,231] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,231] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,231] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,237] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,237] INFO - Create a book with these parameters: title, author, number of pages, isbn.
+[2024-07-21 20:57:30,238] INFO - Create user1 name.
+[2024-07-21 20:57:30,238] INFO - Create user1 name.
+[2024-07-21 20:57:30,238] INFO - Create user2 name.
+[2024-07-21 20:57:30,238] INFO - Create user2 name.
+[2024-07-21 20:57:30,242] INFO - Testing: user2 is trying to return the book that the user1 took.
+[2024-07-21 20:57:30,242] INFO - Testing: user2 is trying to return the book that the user1 took.
+[2024-07-21 20:57:30,243] DEBUG - Book was not returned_by after it was taken by another user: Kate
+[2024-07-21 20:57:30,243] DEBUG - Book was not returned_by after it was taken by another user: Kate
+[2024-07-21 20:57:30,253] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,253] INFO - Tearing down the User2 instance.
+[2024-07-21 20:57:30,254] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,254] INFO - Tearing down the User1 instance.
+[2024-07-21 20:57:30,254] INFO - Tearing down the Book instance.
+[2024-07-21 20:57:30,254] INFO - Tearing down the Book instance.
