@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-07-25T13:46:39.672485" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Library" source="C:\Users\Alina\Homework\pymar2024\homework22\tests\test_library.robot">
+<test id="s1-t1" name="Test Book Initialization" line="19">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.867455" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.865455" elapsed="0.005999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.873455" level="INFO">Book details: Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<arg>Book details: ${book}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.872454" elapsed="0.002005"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${book.title}</arg>
+<arg>${BOOK1_TITLE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.875455" elapsed="0.003003"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${book.author}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.878458" elapsed="0.004995"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${book.number_of_pages}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.884454" elapsed="0.002009"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${book.isbn}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.886463" elapsed="0.001990"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${book.reserved_by}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.888453" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${book.took_by}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.890450" elapsed="0.002003"/>
+</kw>
+<doc>Testing book initialization.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.863456" elapsed="0.028997"/>
+</test>
+<test id="s1-t2" name="Test Get Details" line="30">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.895451" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.894450" elapsed="0.001001"/>
+</kw>
+<kw name="Get Book Details" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.897451" level="INFO">${details} = Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555</msg>
+<var>${details}</var>
+<arg>${book}</arg>
+<doc>Returns a string with the book's details.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.895451" elapsed="0.002000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.898449" level="INFO">Book details: Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555</msg>
+<arg>Book details: ${details}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.897451" elapsed="0.002019"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${details}</arg>
+<arg>Title: ${BOOK1_TITLE}, Author: ${BOOK1_AUTHOR}, Pages: ${BOOK1_PAGES}, ISBN: ${BOOK1_ISBN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.899470" elapsed="0.000980"/>
+</kw>
+<doc>Testing getting detailed information about a book.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.893451" elapsed="0.006999"/>
+</test>
+<test id="s1-t3" name="Test Book Reservation" line="37">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.906449" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.904450" elapsed="0.003001"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.908452" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1902F00&gt;</msg>
+<var>${user1}</var>
+<arg>${USER1_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.907451" elapsed="0.001997"/>
+</kw>
+<kw name="Reserve Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.910453" level="INFO">Kate reserved the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Reserve the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.909448" elapsed="0.003001"/>
+</kw>
+<kw name="Is Book Reserved" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.914451" level="INFO">${is_reserved} = True</msg>
+<var>${is_reserved}</var>
+<arg>${book}</arg>
+<doc>Returns True if the book is reserved, False otherwise.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.913449" elapsed="0.001002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.916449" level="INFO">Book reserved: True</msg>
+<arg>Book reserved: ${is_reserved}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.915447" elapsed="0.001002"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_reserved}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.917455" elapsed="0.001997"/>
+</kw>
+<doc>Testing book reservation.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.902451" elapsed="0.017996"/>
+</test>
+<test id="s1-t4" name="Test Secondary Book Reservation" line="46">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.923449" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.923449" elapsed="0.000997"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.925446" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1911100&gt;</msg>
+<var>${user1}</var>
+<arg>${USER1_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.924446" elapsed="0.001000"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.926447" level="INFO">${user2} = &lt;homework11_library.User object at 0x00000147A19116D0&gt;</msg>
+<var>${user2}</var>
+<arg>${USER2_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.925446" elapsed="0.001001"/>
+</kw>
+<kw name="Reserve Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.928448" level="INFO">Kate reserved the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Reserve the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.927445" elapsed="0.001003"/>
+</kw>
+<kw name="Reserve Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.928448" level="INFO">This book Harry Potter has already been reserved by Kate.</msg>
+<arg>${user2}</arg>
+<arg>${book}</arg>
+<doc>Reserve the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.928448" elapsed="0.000000"/>
+</kw>
+<kw name="Book Reserved By" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.930446" level="INFO">${reserved_by} = Kate</msg>
+<var>${reserved_by}</var>
+<arg>${book}</arg>
+<doc>Returns True if the book is taken, False otherwise.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.929445" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.932445" level="INFO">Book reserved by: Kate</msg>
+<arg>Book reserved by: ${reserved_by}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.930446" elapsed="0.002999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${reserved_by}</arg>
+<arg>${USER1_NAME}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.934458" elapsed="0.000986"/>
+</kw>
+<doc>Testing secondary book reservation.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.921447" elapsed="0.013997"/>
+</test>
+<test id="s1-t5" name="Test Book Taking" line="57">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.939445" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.938444" elapsed="0.001001"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.940444" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1903950&gt;</msg>
+<var>${user1}</var>
+<arg>${USER1_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.939445" elapsed="0.000999"/>
+</kw>
+<kw name="Take Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.940444" level="INFO">Kate took the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Take the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.940444" elapsed="0.000999"/>
+</kw>
+<kw name="Is Book Taken" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.942442" level="INFO">${is_taken} = True</msg>
+<var>${is_taken}</var>
+<arg>${book}</arg>
+<doc>Returns True if the book is taken, False otherwise.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.941443" elapsed="0.000999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.943443" level="INFO">Book taken: True</msg>
+<arg>Book taken: ${is_taken}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.943443" elapsed="0.001002"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_taken}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.944445" elapsed="0.000000"/>
+</kw>
+<doc>Testing book taking.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.936444" elapsed="0.008999"/>
+</test>
+<test id="s1-t6" name="Test Secondary Book Taking" line="66">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.947442" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.946442" elapsed="0.001000"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.948441" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A18E7980&gt;</msg>
+<var>${user1}</var>
+<arg>${USER1_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.947442" elapsed="0.000999"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.950446" level="INFO">${user2} = &lt;homework11_library.User object at 0x00000147A18E7F20&gt;</msg>
+<var>${user2}</var>
+<arg>${USER2_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.948441" elapsed="0.002005"/>
+</kw>
+<kw name="Take Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.953444" level="INFO">Kate took the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Take the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.951442" elapsed="0.002002"/>
+</kw>
+<kw name="Take Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.955441" level="INFO">This book Harry Potter has already been taken by Kate.</msg>
+<arg>${user2}</arg>
+<arg>${book}</arg>
+<doc>Take the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.954443" elapsed="0.000998"/>
+</kw>
+<kw name="Book Took By" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.955441" level="INFO">${took_by} = Kate</msg>
+<var>${took_by}</var>
+<arg>${book}</arg>
+<doc>Returns True if the book is taken, False otherwise.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.955441" elapsed="0.001004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.956445" level="INFO">Book took by: Kate</msg>
+<arg>Book took by: ${took_by}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.956445" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${took_by}</arg>
+<arg>${USER1_NAME}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.957446" elapsed="0.000998"/>
+</kw>
+<doc>Testing secondary book taking.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.946442" elapsed="0.013000"/>
+</test>
+<test id="s1-t7" name="Test Return Book" line="77">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.962440" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.961440" elapsed="0.001000"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.964440" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1900BC0&gt;</msg>
+<var>${user1}</var>
+<arg>${USER1_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.963439" elapsed="0.001001"/>
+</kw>
+<kw name="Take Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.965439" level="INFO">Kate took the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Take the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.965439" elapsed="0.001000"/>
+</kw>
+<kw name="Return Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.968441" level="INFO">Kate returned the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Return the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.967454" elapsed="0.000987"/>
+</kw>
+<kw name="Book Took By" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.968441" level="INFO">${took_by} = </msg>
+<var>${took_by}</var>
+<arg>${book}</arg>
+<doc>Returns True if the book is taken, False otherwise.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.968441" elapsed="0.000997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.969438" level="INFO">Book took by after returning: </msg>
+<arg>Book took by after returning: ${took_by}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.969438" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.971440" level="INFO">Length is 0.</msg>
+<arg>${took_by}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.970438" elapsed="0.001002"/>
+</kw>
+<doc>Testing returning a book.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.960441" elapsed="0.011998"/>
+</test>
+<test id="s1-t8" name="Test Return Book Not Taken" line="87">
+<kw name="Create Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.975439" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
+<var>${book}</var>
+<arg>${BOOK1_TITLE}</arg>
+<arg>${BOOK1_AUTHOR}</arg>
+<arg>${BOOK1_PAGES}</arg>
+<arg>${BOOK1_ISBN}</arg>
+<doc>Create a book and return it.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.974439" elapsed="0.001000"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.976440" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A19007A0&gt;</msg>
+<var>${user1}</var>
+<arg>${USER1_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.975439" elapsed="0.001001"/>
+</kw>
+<kw name="Create User" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.977445" level="INFO">${user2} = &lt;homework11_library.User object at 0x00000147A19010A0&gt;</msg>
+<var>${user2}</var>
+<arg>${USER2_NAME}</arg>
+<doc>Create a user with the given name.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.976440" elapsed="0.001005"/>
+</kw>
+<kw name="Take Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.978445" level="INFO">Kate took the Harry Potter</msg>
+<arg>${user1}</arg>
+<arg>${book}</arg>
+<doc>Take the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.977445" elapsed="0.001993"/>
+</kw>
+<kw name="Return Book" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.981439" level="INFO">Ira can not return Harry Potter because it hasbeen not taken by her/ him.</msg>
+<arg>${user2}</arg>
+<arg>${book}</arg>
+<doc>Return the given book using the user.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.980445" elapsed="0.000994"/>
+</kw>
+<kw name="Book Took By" owner="LibraryKeywords">
+<msg time="2024-07-25T13:46:39.983448" level="INFO">${took_by} = Kate</msg>
+<var>${took_by}</var>
+<arg>${book}</arg>
+<doc>Returns True if the book is taken, False otherwise.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.982436" elapsed="0.002001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:46:39.985437" level="INFO">Book took by after trying to return: Kate</msg>
+<arg>Book took by after trying to return: ${took_by}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.984437" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${took_by}</arg>
+<arg>${USER1_NAME}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.985437" elapsed="0.000999"/>
+</kw>
+<doc>Testing returning a book that hasn't been taken.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.972439" elapsed="0.013997"/>
+</test>
+<doc>Unittest for Homework 11: library.</doc>
+<status status="PASS" start="2024-07-25T13:46:39.721478" elapsed="0.265959"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Test Library">Test Library</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Unittest for Homework 11: bank deposit.
 
-Library    BankKeywords.py
+Library    ../resources/BankKeywords.py
 
 *** Variables ***
 ${USER}    Petya
