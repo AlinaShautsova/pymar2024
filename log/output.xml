@@ -1,435 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-07-25T13:46:39.672485" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Library" source="C:\Users\Alina\Homework\pymar2024\homework22\tests\test_library.robot">
-<test id="s1-t1" name="Test Book Initialization" line="19">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.867455" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.865455" elapsed="0.005999"/>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-07-25T13:52:21.153791" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Bank" source="C:\Users\Alina\Homework\pymar2024\homework22\tests\test_bank.robot">
+<test id="s1-t1" name="Test Deposit Initialization" line="13">
+<kw name="Create Deposit" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.286060" level="INFO">${deposit} = &lt;homework11_bank_deposit.Deposit object at 0x000001E34BE024B0&gt;</msg>
+<var>${deposit}</var>
+<arg>${INITIAL_AMOUNT}</arg>
+<arg>${YEARS}</arg>
+<doc>Creates a new Deposit instance.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.284883" elapsed="0.005178"/>
+</kw>
+<kw name="Get Deposit Amount" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.292061" level="INFO">${amount} = 100</msg>
+<var>${amount}</var>
+<arg>${deposit}</arg>
+<doc>Returns the initial deposit amount.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.290061" elapsed="0.002999"/>
+</kw>
+<kw name="Get Deposit Term" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.294061" level="INFO">${term} = 2</msg>
+<var>${term}</var>
+<arg>${deposit}</arg>
+<doc>Returns the term of the deposit in years.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.293060" elapsed="0.001001"/>
+</kw>
+<kw name="Get Annual Rate" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.295061" level="INFO">${rate} = 10</msg>
+<var>${rate}</var>
+<arg>${deposit}</arg>
+<doc>Returns the annual interest rate of the deposit.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.294061" elapsed="0.001999"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.873455" level="INFO">Book details: Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<arg>Book details: ${book}</arg>
+<msg time="2024-07-25T13:52:21.296836" level="INFO">Initial deposit amount: 100</msg>
+<arg>Initial deposit amount: ${amount}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.872454" elapsed="0.002005"/>
+<status status="PASS" start="2024-07-25T13:52:21.296836" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${book.title}</arg>
-<arg>${BOOK1_TITLE}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.875455" elapsed="0.003003"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.297838" level="INFO">Deposit term: 2 2</msg>
+<arg>Deposit term: ${term} ${YEARS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.297838" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${book.author}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.878458" elapsed="0.004995"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.298839" level="INFO">Annual interest rate: 10%</msg>
+<arg>Annual interest rate: ${rate}%</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.298839" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${book.number_of_pages}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.884454" elapsed="0.002009"/>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${amount}</arg>
+<arg>${INITIAL_AMOUNT}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.299840" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${book.isbn}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.886463" elapsed="0.001990"/>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${term}</arg>
+<arg>${YEARS}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.299840" elapsed="0.000996"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${book.reserved_by}</arg>
-<arg>${EMPTY}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.888453" elapsed="0.000999"/>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.302839" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${rate}</arg>
+<arg>10</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.301838" elapsed="0.001001"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${book.took_by}</arg>
-<arg>${EMPTY}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.890450" elapsed="0.002003"/>
-</kw>
-<doc>Testing book initialization.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.863456" elapsed="0.028997"/>
+<doc>Testing deposit initialization.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.281886" elapsed="0.021949"/>
 </test>
-<test id="s1-t2" name="Test Get Details" line="30">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.895451" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.894450" elapsed="0.001001"/>
+<test id="s1-t2" name="Test Final Amount" line="26">
+<kw name="Create Deposit" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.306103" level="INFO">${deposit} = &lt;homework11_bank_deposit.Deposit object at 0x000001E34BE213D0&gt;</msg>
+<var>${deposit}</var>
+<arg>${INITIAL_AMOUNT}</arg>
+<arg>${YEARS}</arg>
+<doc>Creates a new Deposit instance.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.306103" elapsed="0.000000"/>
 </kw>
-<kw name="Get Book Details" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.897451" level="INFO">${details} = Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555</msg>
-<var>${details}</var>
-<arg>${book}</arg>
-<doc>Returns a string with the book's details.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.895451" elapsed="0.002000"/>
+<kw name="Final Amount" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.307105" level="INFO">${final_amount} = 122.03909613755604</msg>
+<var>${final_amount}</var>
+<arg>${deposit}</arg>
+<doc>Calculates the final amount of the deposit after the term.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.307105" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.308105" level="INFO">${expected_amount} = 122.03909613755593</msg>
+<var>${expected_amount}</var>
+<arg>100 * (1 + 10 / 12 / 100) ** (2 * 12)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.307105" elapsed="0.001000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.898449" level="INFO">Book details: Title: Harry Potter, Author: Joanne Rowling, Pages: 500, ISBN: 932-994-555</msg>
-<arg>Book details: ${details}</arg>
+<msg time="2024-07-25T13:52:21.309103" level="INFO">Calculated final amount: 122.03909613755604</msg>
+<arg>Calculated final amount: ${final_amount}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.897451" elapsed="0.002019"/>
+<status status="PASS" start="2024-07-25T13:52:21.308105" elapsed="0.000998"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${details}</arg>
-<arg>Title: ${BOOK1_TITLE}, Author: ${BOOK1_AUTHOR}, Pages: ${BOOK1_PAGES}, ISBN: ${BOOK1_ISBN}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.899470" elapsed="0.000980"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.310104" level="INFO">Expected final amount: 122.03909613755593</msg>
+<arg>Expected final amount: ${expected_amount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.309103" elapsed="0.001001"/>
 </kw>
-<doc>Testing getting detailed information about a book.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.893451" elapsed="0.006999"/>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${final_amount}</arg>
+<arg>${expected_amount}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.310104" elapsed="0.001001"/>
+</kw>
+<doc>Testing final amount calculation.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.304836" elapsed="0.006269"/>
 </test>
-<test id="s1-t3" name="Test Book Reservation" line="37">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.906449" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.904450" elapsed="0.003001"/>
+<test id="s1-t3" name="Test Bank Deposit" line="35">
+<kw name="Create Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.314102" level="INFO">${bank} = &lt;homework11_bank_deposit.Bank object at 0x000001E34BE23260&gt;</msg>
+<var>${bank}</var>
+<doc>Creates a new Bank instance.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.313105" elapsed="0.000997"/>
 </kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.908452" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1902F00&gt;</msg>
-<var>${user1}</var>
-<arg>${USER1_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.907451" elapsed="0.001997"/>
+<kw name="Deposit To Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.315102" level="INFO">${final_amount} = 122.03909613755604</msg>
+<var>${final_amount}</var>
+<arg>${bank}</arg>
+<arg>${USER}</arg>
+<arg>${INITIAL_AMOUNT}</arg>
+<arg>${YEARS}</arg>
+<doc>Makes a deposit to the bank for a specific user.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.314102" elapsed="0.001000"/>
 </kw>
-<kw name="Reserve Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.910453" level="INFO">Kate reserved the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Reserve the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.909448" elapsed="0.003001"/>
-</kw>
-<kw name="Is Book Reserved" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.914451" level="INFO">${is_reserved} = True</msg>
-<var>${is_reserved}</var>
-<arg>${book}</arg>
-<doc>Returns True if the book is reserved, False otherwise.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.913449" elapsed="0.001002"/>
+<kw name="Withdraw" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.316104" level="INFO">${user_amount} = 122.03909613755604</msg>
+<var>${user_amount}</var>
+<arg>${bank}</arg>
+<arg>${USER}</arg>
+<doc>Withdraws the deposit amount for a user from the bank.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.315102" elapsed="0.001188"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.916449" level="INFO">Book reserved: True</msg>
-<arg>Book reserved: ${is_reserved}</arg>
+<msg time="2024-07-25T13:52:21.316290" level="INFO">Final amount in bank: 122.03909613755604</msg>
+<arg>Final amount in bank: ${final_amount}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.915447" elapsed="0.001002"/>
+<status status="PASS" start="2024-07-25T13:52:21.316290" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.317291" level="INFO">User amount after withdrawal: 122.03909613755604</msg>
+<arg>User amount after withdrawal: ${user_amount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.317291" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${user_amount}</arg>
+<arg>${final_amount}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.318291" elapsed="0.000000"/>
+</kw>
+<doc>Testing bank deposit functionality.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.312103" elapsed="0.006188"/>
+</test>
+<test id="s1-t4" name="Test Bank Withdraw" line="44">
+<kw name="Create Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.321290" level="INFO">${bank} = &lt;homework11_bank_deposit.Bank object at 0x000001E34BDC9A00&gt;</msg>
+<var>${bank}</var>
+<doc>Creates a new Bank instance.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.320291" elapsed="0.000999"/>
+</kw>
+<kw name="Deposit To Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.322291" level="INFO">${final_amount} = 122.03909613755604</msg>
+<var>${final_amount}</var>
+<arg>${bank}</arg>
+<arg>${USER}</arg>
+<arg>${INITIAL_AMOUNT}</arg>
+<arg>${YEARS}</arg>
+<doc>Makes a deposit to the bank for a specific user.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.321290" elapsed="0.001001"/>
+</kw>
+<kw name="Withdraw" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.323292" level="INFO">${withdrawn_amount} = 122.03909613755604</msg>
+<var>${withdrawn_amount}</var>
+<arg>${bank}</arg>
+<arg>${USER}</arg>
+<doc>Withdraws the deposit amount for a user from the bank.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.322291" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.323292" level="INFO">Withdrawn amount: 122.03909613755604</msg>
+<arg>Withdrawn amount: ${withdrawn_amount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.323292" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${withdrawn_amount}</arg>
+<arg>${final_amount}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.324291" elapsed="0.000000"/>
+</kw>
+<doc>Testing bank withdrawal functionality.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.319293" elapsed="0.004998"/>
+</test>
+<test id="s1-t5" name="Test Withdraw from Nonexistent User" line="52">
+<kw name="Create Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.326485" level="INFO">${bank} = &lt;homework11_bank_deposit.Bank object at 0x000001E34BE239B0&gt;</msg>
+<var>${bank}</var>
+<doc>Creates a new Bank instance.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.326485" elapsed="0.001000"/>
+</kw>
+<kw name="Withdraw" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.327485" level="INFO">${withdrawn_amount} = 0</msg>
+<var>${withdrawn_amount}</var>
+<arg>${bank}</arg>
+<arg>NonexistentUser</arg>
+<doc>Withdraws the deposit amount for a user from the bank.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.327485" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.328483" level="INFO">Withdrawn amount for nonexistent user: 0</msg>
+<arg>Withdrawn amount for nonexistent user: ${withdrawn_amount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.328483" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.329485" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${withdrawn_amount}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.329485" elapsed="0.000000"/>
+</kw>
+<doc>Testing withdrawal for a nonexistent user.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.325483" elapsed="0.004002"/>
+</test>
+<test id="s1-t6" name="Test Deposit Calculation" line="60">
+<kw name="Create Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.332484" level="INFO">${bank} = &lt;homework11_bank_deposit.Bank object at 0x000001E34BE03B30&gt;</msg>
+<var>${bank}</var>
+<doc>Creates a new Bank instance.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.331484" elapsed="0.001000"/>
+</kw>
+<kw name="Deposit To Bank" owner="Bank_keywords">
+<msg time="2024-07-25T13:52:21.333482" level="INFO">${final_amount} = 122.03909613755604</msg>
+<var>${final_amount}</var>
+<arg>${bank}</arg>
+<arg>${USER}</arg>
+<arg>${INITIAL_AMOUNT}</arg>
+<arg>${YEARS}</arg>
+<doc>Makes a deposit to the bank for a specific user.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.332484" elapsed="0.000998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-25T13:52:21.334484" level="INFO">Final amount after deposit: 122.03909613755604</msg>
+<arg>Final amount after deposit: ${final_amount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.333482" elapsed="0.001002"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
-<arg>${is_reserved}</arg>
+<arg>${final_amount} &gt; ${INITIAL_AMOUNT}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.917455" elapsed="0.001997"/>
+<status status="PASS" start="2024-07-25T13:52:21.334484" elapsed="0.000998"/>
 </kw>
-<doc>Testing book reservation.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.902451" elapsed="0.017996"/>
+<doc>Testing deposit initialization.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.330485" elapsed="0.005999"/>
 </test>
-<test id="s1-t4" name="Test Secondary Book Reservation" line="46">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.923449" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.923449" elapsed="0.000997"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.925446" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1911100&gt;</msg>
-<var>${user1}</var>
-<arg>${USER1_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.924446" elapsed="0.001000"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.926447" level="INFO">${user2} = &lt;homework11_library.User object at 0x00000147A19116D0&gt;</msg>
-<var>${user2}</var>
-<arg>${USER2_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.925446" elapsed="0.001001"/>
-</kw>
-<kw name="Reserve Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.928448" level="INFO">Kate reserved the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Reserve the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.927445" elapsed="0.001003"/>
-</kw>
-<kw name="Reserve Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.928448" level="INFO">This book Harry Potter has already been reserved by Kate.</msg>
-<arg>${user2}</arg>
-<arg>${book}</arg>
-<doc>Reserve the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.928448" elapsed="0.000000"/>
-</kw>
-<kw name="Book Reserved By" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.930446" level="INFO">${reserved_by} = Kate</msg>
-<var>${reserved_by}</var>
-<arg>${book}</arg>
-<doc>Returns True if the book is taken, False otherwise.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.929445" elapsed="0.001001"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.932445" level="INFO">Book reserved by: Kate</msg>
-<arg>Book reserved by: ${reserved_by}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.930446" elapsed="0.002999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${reserved_by}</arg>
-<arg>${USER1_NAME}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.934458" elapsed="0.000986"/>
-</kw>
-<doc>Testing secondary book reservation.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.921447" elapsed="0.013997"/>
-</test>
-<test id="s1-t5" name="Test Book Taking" line="57">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.939445" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.938444" elapsed="0.001001"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.940444" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1903950&gt;</msg>
-<var>${user1}</var>
-<arg>${USER1_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.939445" elapsed="0.000999"/>
-</kw>
-<kw name="Take Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.940444" level="INFO">Kate took the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Take the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.940444" elapsed="0.000999"/>
-</kw>
-<kw name="Is Book Taken" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.942442" level="INFO">${is_taken} = True</msg>
-<var>${is_taken}</var>
-<arg>${book}</arg>
-<doc>Returns True if the book is taken, False otherwise.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.941443" elapsed="0.000999"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.943443" level="INFO">Book taken: True</msg>
-<arg>Book taken: ${is_taken}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.943443" elapsed="0.001002"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${is_taken}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.944445" elapsed="0.000000"/>
-</kw>
-<doc>Testing book taking.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.936444" elapsed="0.008999"/>
-</test>
-<test id="s1-t6" name="Test Secondary Book Taking" line="66">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.947442" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.946442" elapsed="0.001000"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.948441" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A18E7980&gt;</msg>
-<var>${user1}</var>
-<arg>${USER1_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.947442" elapsed="0.000999"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.950446" level="INFO">${user2} = &lt;homework11_library.User object at 0x00000147A18E7F20&gt;</msg>
-<var>${user2}</var>
-<arg>${USER2_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.948441" elapsed="0.002005"/>
-</kw>
-<kw name="Take Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.953444" level="INFO">Kate took the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Take the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.951442" elapsed="0.002002"/>
-</kw>
-<kw name="Take Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.955441" level="INFO">This book Harry Potter has already been taken by Kate.</msg>
-<arg>${user2}</arg>
-<arg>${book}</arg>
-<doc>Take the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.954443" elapsed="0.000998"/>
-</kw>
-<kw name="Book Took By" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.955441" level="INFO">${took_by} = Kate</msg>
-<var>${took_by}</var>
-<arg>${book}</arg>
-<doc>Returns True if the book is taken, False otherwise.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.955441" elapsed="0.001004"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.956445" level="INFO">Book took by: Kate</msg>
-<arg>Book took by: ${took_by}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.956445" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${took_by}</arg>
-<arg>${USER1_NAME}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.957446" elapsed="0.000998"/>
-</kw>
-<doc>Testing secondary book taking.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.946442" elapsed="0.013000"/>
-</test>
-<test id="s1-t7" name="Test Return Book" line="77">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.962440" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.961440" elapsed="0.001000"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.964440" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A1900BC0&gt;</msg>
-<var>${user1}</var>
-<arg>${USER1_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.963439" elapsed="0.001001"/>
-</kw>
-<kw name="Take Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.965439" level="INFO">Kate took the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Take the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.965439" elapsed="0.001000"/>
-</kw>
-<kw name="Return Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.968441" level="INFO">Kate returned the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Return the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.967454" elapsed="0.000987"/>
-</kw>
-<kw name="Book Took By" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.968441" level="INFO">${took_by} = </msg>
-<var>${took_by}</var>
-<arg>${book}</arg>
-<doc>Returns True if the book is taken, False otherwise.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.968441" elapsed="0.000997"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.969438" level="INFO">Book took by after returning: </msg>
-<arg>Book took by after returning: ${took_by}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.969438" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Empty" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.971440" level="INFO">Length is 0.</msg>
-<arg>${took_by}</arg>
-<doc>Verifies that the given item is empty.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.970438" elapsed="0.001002"/>
-</kw>
-<doc>Testing returning a book.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.960441" elapsed="0.011998"/>
-</test>
-<test id="s1-t8" name="Test Return Book Not Taken" line="87">
-<kw name="Create Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.975439" level="INFO">${book} = Book Harry Potter, Joanne Rowling, 500, 932-994-555, , </msg>
-<var>${book}</var>
-<arg>${BOOK1_TITLE}</arg>
-<arg>${BOOK1_AUTHOR}</arg>
-<arg>${BOOK1_PAGES}</arg>
-<arg>${BOOK1_ISBN}</arg>
-<doc>Create a book and return it.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.974439" elapsed="0.001000"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.976440" level="INFO">${user1} = &lt;homework11_library.User object at 0x00000147A19007A0&gt;</msg>
-<var>${user1}</var>
-<arg>${USER1_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.975439" elapsed="0.001001"/>
-</kw>
-<kw name="Create User" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.977445" level="INFO">${user2} = &lt;homework11_library.User object at 0x00000147A19010A0&gt;</msg>
-<var>${user2}</var>
-<arg>${USER2_NAME}</arg>
-<doc>Create a user with the given name.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.976440" elapsed="0.001005"/>
-</kw>
-<kw name="Take Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.978445" level="INFO">Kate took the Harry Potter</msg>
-<arg>${user1}</arg>
-<arg>${book}</arg>
-<doc>Take the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.977445" elapsed="0.001993"/>
-</kw>
-<kw name="Return Book" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.981439" level="INFO">Ira can not return Harry Potter because it hasbeen not taken by her/ him.</msg>
-<arg>${user2}</arg>
-<arg>${book}</arg>
-<doc>Return the given book using the user.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.980445" elapsed="0.000994"/>
-</kw>
-<kw name="Book Took By" owner="LibraryKeywords">
-<msg time="2024-07-25T13:46:39.983448" level="INFO">${took_by} = Kate</msg>
-<var>${took_by}</var>
-<arg>${book}</arg>
-<doc>Returns True if the book is taken, False otherwise.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.982436" elapsed="0.002001"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-25T13:46:39.985437" level="INFO">Book took by after trying to return: Kate</msg>
-<arg>Book took by after trying to return: ${took_by}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.984437" elapsed="0.001000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${took_by}</arg>
-<arg>${USER1_NAME}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.985437" elapsed="0.000999"/>
-</kw>
-<doc>Testing returning a book that hasn't been taken.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.972439" elapsed="0.013997"/>
-</test>
-<doc>Unittest for Homework 11: library.</doc>
-<status status="PASS" start="2024-07-25T13:46:39.721478" elapsed="0.265959"/>
+<doc>Unittest for Homework 11: bank deposit.</doc>
+<status status="PASS" start="2024-07-25T13:52:21.194488" elapsed="0.143205"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="8" fail="0" skip="0" id="s1" name="Test Library">Test Library</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="Test Bank">Test Bank</stat>
 </suite>
 </statistics>
 <errors>

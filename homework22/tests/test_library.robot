@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Unittest for Homework 11: library.
 
-Library    ../resources/LibraryKeywords.py
+Library    ../resources/Library_keywords.py
 
 *** Variables ***
 ${BOOK1_TITLE}        Harry Potter
