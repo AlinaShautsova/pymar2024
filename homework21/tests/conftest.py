@@ -9,7 +9,7 @@ from logging_module import setup_logging
 logger = setup_logging()
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_bank():
     """Set up the test environment."""
     logger.info("Setting up the Bank instance.")
@@ -19,7 +19,7 @@ def setup_bank():
     del bank
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_deposit():
     """Set up the test environment."""
     logger.info("Setting up the Deposit instance.")
@@ -29,7 +29,7 @@ def setup_deposit():
     del deposit
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_user1_bank():
     """Set up the test environment."""
     logger.info("Setting up the User1 instance.")
@@ -39,7 +39,7 @@ def setup_user1_bank():
     del user1
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_user2_bank():
     """Set up the test environment."""
     logger.info("Setting up the User2 instance.")
@@ -49,7 +49,7 @@ def setup_user2_bank():
     del user2
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_initial_amount():
     """Set up the test environment."""
     logger.info("Setting up the Initial amount instance.")
@@ -59,7 +59,7 @@ def setup_initial_amount():
     del initial_amount
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_years():
     """Set up the test environment."""
     logger.info("Setting up years instance.")
@@ -69,7 +69,7 @@ def setup_years():
     del years
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_book():
     """Set up the test environment."""
     logger.info("Create a book with these parameters: title, author, "
@@ -81,7 +81,7 @@ def setup_book():
     del book
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_user1_library():
     """Set up the test environment."""
     logger.info("Create user1 name.")
@@ -91,7 +91,7 @@ def setup_user1_library():
     del user1
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def setup_user2_library():
     """Set up the test environment."""
     logger.info("Create user2 name.")
