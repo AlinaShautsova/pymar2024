@@ -9,8 +9,8 @@
 # LOGIN_SUBMIT_BUTTON = '//button[@id="submit"]'
 
 # ===========================================================================
-
 """On Add User page, create user."""
+
 # 1. Go to login page URL:
 #'https://thinking-tester-contact-list.herokuapp.com/'
 # 2. Push on 'Sign up' button
