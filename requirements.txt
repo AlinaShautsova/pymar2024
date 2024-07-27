@@ -4,3 +4,4 @@ mypy
 ruff
 pylint
 robotframework~=7.0.1
+pytest
