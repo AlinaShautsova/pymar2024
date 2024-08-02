@@ -1,4 +1,4 @@
-"""This module contains locators for Delete Contact on Contact Details page."""
+"""This module contains locators for Delete contact on Contact Details page."""
 
 
 class DeleteContactDetails:

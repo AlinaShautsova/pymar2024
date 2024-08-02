@@ -1,4 +1,4 @@
-"""Module for adding, updating, and deleting contacts."""
+"""This module for adding, updating, and deleting contacts."""
 
 import time
 from selenium.common.exceptions import TimeoutException
