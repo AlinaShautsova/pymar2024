@@ -1,6 +1,6 @@
 """Authorization user."""
 # 1. Go to login page URL:
-#'https://thinking-tester-contact-list.herokuapp.com/'
+# 'https://thinking-tester-contact-list.herokuapp.com/'
 # 2. Enter login
 # LOGIN_EMAIL_INPUT = '//input[@id="email"]'
 # 3. Enter password
@@ -12,7 +12,7 @@
 """On Add User page, create user."""
 
 # 1. Go to login page URL:
-#'https://thinking-tester-contact-list.herokuapp.com/'
+# 'https://thinking-tester-contact-list.herokuapp.com/'
 # 2. Push on 'Sign up' button
 # LOGIN_SIGNUP_BUTTON = '//button[@id="signup"]'
 # 3. Enter user first name
