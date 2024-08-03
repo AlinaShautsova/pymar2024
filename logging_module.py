@@ -1,11 +1,11 @@
-"""Module logging for homework21."""
+"""Module logging for homework22."""
 import logging
 
 
 def setup_logging():
     """Set up logging function."""
     formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s')
-    file_handler = logging.FileHandler('pytest.log')
+    file_handler = logging.FileHandler('robot.log')
     file_handler.setFormatter(formatter)
 
     console_handler = logging.StreamHandler()

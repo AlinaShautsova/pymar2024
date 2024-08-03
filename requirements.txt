@@ -3,5 +3,6 @@ pycodestyle
 mypy
 ruff
 pylint
-pytest~=8.2.2
 selenium~=4.23.1
+robotframework~=7.0.1
+pytest
