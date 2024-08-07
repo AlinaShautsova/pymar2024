@@ -18,7 +18,7 @@ def open_browser():
     browser.quit()
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture()
 def login(open_browser):
     """The browser fixture to open the login page."""
 
