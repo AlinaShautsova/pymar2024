@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from homework24.locators.add_contact_page import AddContactPageLocators
 from homework24.locators.edit_contact_page import EditContactPageLocators
-from homework24.Metods import add_contact, edit_contact, delete_contact
+from homework24.methods import add_contact, edit_contact, delete_contact
 
 
 def test_add_contact(open_browser, login):
