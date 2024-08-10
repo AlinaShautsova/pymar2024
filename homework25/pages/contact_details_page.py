@@ -16,8 +16,8 @@ class ContactDetailsPage(BasePage):
 
     def click_edit_button(self):
         """Click edit button."""
-        edit_contact_button = \
-            (self.find_element(ContactDetailsPageLocators.EDIT_CONTACT_BUTTON))
+        edit_contact_button = self.find_element(
+            ContactDetailsPageLocators.EDIT_CONTACT_BUTTON)
         edit_contact_button.click()
 
     def click_delete_button(self):

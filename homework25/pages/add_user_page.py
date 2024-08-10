@@ -1,8 +1,8 @@
 """All methods for Add user page."""
 
 from homework25.pages.base_page import BasePage
-from homework24.locators.add_user_page import AddUserPageLocators
 from homework25.test_data.add_user_test_data import URL
+from homework24.locators.add_user_page import AddUserPageLocators
 
 
 class AddUserPage(BasePage):
@@ -37,7 +37,7 @@ class AddUserPage(BasePage):
 
     def click_submit_button(self):
         """Click on submit button."""
-        submit_button = (self.find_element(AddUserPageLocators.SUBMIT_BUTTON))
+        submit_button = self.find_element(AddUserPageLocators.SUBMIT_BUTTON)
         submit_button.click()
 
     def add_user(self, first_name, last_name, email, password):

@@ -12,8 +12,23 @@ from homework25.pages.add_contact_page import AddContactPage
 from homework25.pages.contact_details_page import ContactDetailsPage
 from homework25.pages.contact_list_page import ContactListPage
 from homework25.pages.edit_contact_page import EditContactPage
-from homework25.test_data.add_contact_test_data import *
-from homework25.test_data.edit_contact_test_data import *
+from homework25.test_data.add_contact_test_data import (FIRST_NAME, LAST_NAME,
+                                                        BIRTH_DATE, EMAIL,
+                                                        PHONE, ADDRESS_STREET1,
+                                                        ADDRESS_STREET2, CITY,
+                                                        STATE_OR_PROVINCE,
+                                                        POST_CODE, COUNTRY)
+from homework25.test_data.edit_contact_test_data import (EDIT_FIRST_NAME,
+                                                         EDIT_LAST_NAME,
+                                                         EDIT_BIRTH_DATE,
+                                                         EDIT_EMAIL,
+                                                         EDIT_PHONE,
+                                                         EDIT_ADDRESS_STREET1,
+                                                         EDIT_ADDRESS_STREET2,
+                                                         EDIT_CITY,
+                                                         EDIT_STATE_PROVINCE,
+                                                         EDIT_POST_CODE,
+                                                         EDIT_COUNTRY)
 
 
 def test_add_contact(open_browser, login):
@@ -45,8 +60,8 @@ def test_edit_contact(open_browser, login):
     edit_contact_page.edit_contact(EDIT_FIRST_NAME, EDIT_LAST_NAME,
                                    EDIT_BIRTH_DATE, EDIT_EMAIL, EDIT_PHONE,
                                    EDIT_ADDRESS_STREET1, EDIT_ADDRESS_STREET2,
-                                   EDIT_CITY, EDIT_STATE_OR_PROVINCE,
-                                   EDIT_POST_CODE,  EDIT_COUNTRY)
+                                   EDIT_CITY, EDIT_STATE_PROVINCE,
+                                   EDIT_POST_CODE, EDIT_COUNTRY)
 
     time.sleep(3)
 
@@ -59,7 +74,7 @@ def test_edit_contact(open_browser, login):
         ContactDetailsPageLocators.STREET1_SPAN: EDIT_ADDRESS_STREET1,
         ContactDetailsPageLocators.STREET2_SPAN: EDIT_ADDRESS_STREET2,
         ContactDetailsPageLocators.CITY_SPAN: EDIT_CITY,
-        ContactDetailsPageLocators.STATE_PROVINCE_SPAN: EDIT_STATE_OR_PROVINCE,
+        ContactDetailsPageLocators.STATE_PROVINCE_SPAN: EDIT_STATE_PROVINCE,
         ContactDetailsPageLocators.POSTAL_CODE_SPAN: EDIT_POST_CODE,
         ContactDetailsPageLocators.COUNTRY_SPAN: EDIT_COUNTRY
     }

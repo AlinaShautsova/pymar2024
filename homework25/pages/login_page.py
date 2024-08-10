@@ -6,9 +6,6 @@ from homework24.locators.login_page import LoginPageLocators
 
 class LoginPage(BasePage):
     """Class Login Page."""
-    def __init__(self, driver):
-        """Initialization."""
-        super().__init__(driver)
 
     def enter_email(self, email):
         """ Enter email."""

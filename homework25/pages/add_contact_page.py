@@ -1,8 +1,8 @@
 """All methods for Add contact page."""
 
 from homework25.pages.base_page import BasePage
-from homework24.locators.add_contact_page import AddContactPageLocators
 from homework25.test_data.add_contact_test_data import URL
+from homework24.locators.add_contact_page import AddContactPageLocators
 
 
 class AddContactPage(BasePage):
