@@ -1,4 +1,4 @@
-"""Edit contact page"""
+"""All methods for Edit contact page"""
 from homework25.pages.base_page import BasePage
 from homework24.locators.edit_contact_page import EditContactPageLocators
 
@@ -10,7 +10,8 @@ class EditContactPage(BasePage):
         """Initialisation."""
         super().__init__(driver)
 
-    def clean_edit_field(self, locator ,value):
+    def clean_edit_field(self, locator, value):
+        """Clean and edit fields."""
         first_name_input = self.find_element(locator)
         first_name_input.clear()
         self.wait_until_element_value(locator, "")

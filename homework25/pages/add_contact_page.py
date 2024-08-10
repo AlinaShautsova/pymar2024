@@ -1,4 +1,4 @@
-"""Add contact page."""
+"""All methods for Add contact page."""
 
 from homework25.pages.base_page import BasePage
 from homework24.locators.add_contact_page import AddContactPageLocators
@@ -26,8 +26,8 @@ class AddContactPage(BasePage):
 
     def enter_date_of_birth(self, birth_date):
         """Enter date of birth."""
-        date_of_birth_input = \
-            (self.find_element(AddContactPageLocators.ADD_DATE_OF_BIRTH_INPUT))
+        date_of_birth_input = self.find_element(
+            AddContactPageLocators.ADD_DATE_OF_BIRTH_INPUT)
         date_of_birth_input.send_keys(birth_date)
 
     def enter_email(self, email):

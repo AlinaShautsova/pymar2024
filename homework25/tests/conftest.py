@@ -1,5 +1,4 @@
 """Module with necessary fixtures."""
-import time
 
 import pytest
 from selenium import webdriver
@@ -9,7 +8,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from homework25.pages.login_page import LoginPage
 from homework25.test_data.login_page_test_data import URL, EMAIL, PASSWORD
-from homework24.locators.login_page import LoginPageLocators
 
 
 @pytest.fixture()

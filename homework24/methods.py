@@ -8,8 +8,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from homework24.locators.add_contact_page import AddContactPageLocators
+from homework24.locators.contact_details_page import ContactDetailsPageLocators
 from homework24.locators.contact_list_page import ContactListPageLocators
-from homework24.locators.delete_contact import DeleteContactDetails
 from homework24.locators.edit_contact_page import EditContactPageLocators
 
 
@@ -32,10 +32,10 @@ def edit_contact(browser, updated_info):
     wait = WebDriverWait(browser, 10)
     (wait.until
      (EC.element_to_be_clickable
-      ((By.XPATH, EditContactPageLocators.CONTACT_TABLE_ROW))).click())
+      ((By.XPATH, ContactListPageLocators.CONTACT_TABLE_ROW))).click())
     (wait.until
      (EC.element_to_be_clickable
-      ((By.XPATH, EditContactPageLocators.EDIT_CONTACT_BUTTON))).click())
+      ((By.XPATH, ContactDetailsPageLocators.EDIT_CONTACT_BUTTON))).click())
     time.sleep(1)
     for field, value in updated_info.items():
         element = wait.until(EC.element_to_be_clickable((By.XPATH, field)))
@@ -52,12 +52,12 @@ def delete_contact(browser):
     wait = WebDriverWait(browser, 10)
     contact_row = (wait.until
                    (EC.presence_of_element_located
-                    ((By.XPATH, DeleteContactDetails.CONTACT_TABLE_ROW))))
+                    ((By.XPATH, ContactListPageLocators.CONTACT_TABLE_ROW))))
     contact_name = contact_row.text
     contact_row.click()
     (wait.until
      (EC.element_to_be_clickable
-      ((By.XPATH, DeleteContactDetails.DELETE_CONTACT_BUTTON))).click())
+      ((By.XPATH, ContactDetailsPageLocators.DELETE_CONTACT_BUTTON))).click())
     wait.until(EC.alert_is_present()).accept()
     try:
         (wait.until

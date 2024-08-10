@@ -1,4 +1,4 @@
-"""Login page"""
+"""All methods for Login page."""
 
 from homework25.pages.base_page import BasePage
 from homework24.locators.login_page import LoginPageLocators

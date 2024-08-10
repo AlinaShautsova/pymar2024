@@ -2,7 +2,7 @@
 
 
 class EditContactPageLocators:
-    """The class contains locators for updating an existing contact."""
+    """The class contains locators for edit contact page."""
     # inputs
     ADD_FIRSTNAME_INPUT = '//input[@id="firstName"]'
     ADD_LASTNAME_INPUT = '//input[@id="lastName"]'

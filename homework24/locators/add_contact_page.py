@@ -2,7 +2,7 @@
 
 
 class AddContactPageLocators:
-    """The class contains locators for adding a contact."""
+    """The class contains locators for adding a contact page."""
     # inputs
     ADD_FIRSTNAME_INPUT = '//input[@id="firstName"]'
     ADD_LAST_NAME_INPUT = '//input[@id="lastName"]'

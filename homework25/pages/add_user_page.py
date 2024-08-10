@@ -1,4 +1,4 @@
-"""Add user page."""
+"""All methods for Add user page."""
 
 from homework25.pages.base_page import BasePage
 from homework24.locators.add_user_page import AddUserPageLocators

@@ -1,4 +1,4 @@
-"""Contact list page."""
+"""All methods for Contact list page."""
 
 from homework25.pages.base_page import BasePage
 from homework24.locators.contact_list_page import ContactListPageLocators
