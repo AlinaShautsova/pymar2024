@@ -8,7 +8,7 @@ DELETE_USER_URL = "functions/deleteUser/"
 
 #  data
 USER_NAME = "John Doe"
-USER_EMAIL = "@gmail.com"
+USER_EMAIL_INDEX = "@gmail.com"
 USER_AGE = 30
 USER_PHONE_NUMBER = "+12345678901"
 USER_ADDRESS = "123 Main St"
