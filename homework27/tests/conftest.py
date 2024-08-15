@@ -15,8 +15,8 @@ def correct_create_user_data():
     """Fixture returns correct data to create a new user."""
     return {
         "name": USER_NAME,
-        "email": f'{"".join(random.choices(string.ascii_lowercase + 
-                                           string.digits, k=10))}{USER_EMAIL}',
+        "email": f'{"".join(random.choices(
+            string.ascii_lowercase + string.digits, k=10))}{USER_EMAIL}',
         "age": USER_AGE,
         "phoneNumber": USER_PHONE_NUMBER,
         "address": USER_ADDRESS,
@@ -49,8 +49,8 @@ def correct_update_user_data():
     """Fixture returns correct user data to update user."""
     return {
         "name": UPDATE_USER_NAME,
-        "email": f'{"".join(random.choices(string.ascii_lowercase + 
-                                           string.digits, k=10))}{USER_EMAIL}',
+        "email": f'{"".join(random.choices(
+            string.ascii_lowercase + string.digits, k=10))}{USER_EMAIL}',
         "age": UPDATE_USER_AGE,
         "phoneNumber": UPDATE_USER_PHONE_NUMBER,
         "address": UPDATE_USER_ADDRESS,

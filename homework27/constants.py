@@ -1,3 +1,4 @@
+"""Module contains API constants."""
 #  url
 MAIN_URL = "https://alexqa.netlify.app/.netlify/"
 CREATE_USER_URL = "functions/createUser"
