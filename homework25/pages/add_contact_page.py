@@ -1,16 +1,11 @@
 """All methods for Add contact page."""
 
 from homework25.pages.base_page import BasePage
-from homework25.test_data.add_contact_test_data import URL
 from homework24.locators.add_contact_page import AddContactPageLocators
 
 
 class AddContactPage(BasePage):
     """Class Add contact."""
-    def __init__(self, driver):
-        """Initialisation."""
-        super().__init__(driver)
-        self.url = URL
 
     def enter_first_name(self, first_name):
         """Enter first name."""

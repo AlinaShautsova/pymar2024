@@ -1,16 +1,11 @@
 """All methods for Contact list page."""
 
 from homework25.pages.base_page import BasePage
-from homework25.test_data.contact_list_test_data import URL
 from homework24.locators.contact_list_page import ContactListPageLocators
 
 
 class ContactListPage(BasePage):
     """Class contact list page."""
-    def __init__(self, driver):
-        """Initialization."""
-        super().__init__(driver)
-        self.url = URL
 
     def click_add_a_new_contact(self):
         """Click on add a new contact button."""

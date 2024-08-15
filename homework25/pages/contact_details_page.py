@@ -4,15 +4,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from homework24.locators.contact_details_page import ContactDetailsPageLocators
 from homework25.pages.base_page import BasePage
-from homework25.test_data.contact_details_test_data import URL
 
 
 class ContactDetailsPage(BasePage):
     """Class Contact details page."""
-    def __init__(self, driver):
-        """Initialisation."""
-        super().__init__(driver)
-        self.url = URL
 
     def click_edit_button(self):
         """Click edit button."""

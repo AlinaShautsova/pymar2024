@@ -7,3 +7,4 @@ class ContactListPageLocators:
     ADD_A_NEW_CONTACT_BUTTON = '//button[@id="add-contact"]'
     LOGOUT_BUTTON = '//button[@id="logout"]'
     CONTACT_TABLE_ROW = '//*[@class="contactTable"]/tr'
+    HEADER = '//*[contains(text(), "Contact List")]'

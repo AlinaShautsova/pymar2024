@@ -3,8 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from homework25.test_data.login_page_test_data import URL
-
 
 class BasePage:
     """Class base page."""
@@ -12,7 +10,6 @@ class BasePage:
     def __init__(self, driver):
         """Initialisation."""
         self.driver = driver
-        self.url = URL
 
     def open(self, url):
         """Open page by url."""

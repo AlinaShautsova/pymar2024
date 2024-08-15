@@ -1,16 +1,11 @@
 """All methods for Add user page."""
 
 from homework25.pages.base_page import BasePage
-from homework25.test_data.add_user_test_data import URL
 from homework24.locators.add_user_page import AddUserPageLocators
 
 
 class AddUserPage(BasePage):
     """Class Add user."""
-    def __init__(self, driver):
-        """Initialisation."""
-        super().__init__(driver)
-        self.url = URL
 
     def enter_first_name(self, first_name):
         """Enter first name."""

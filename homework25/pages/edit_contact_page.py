@@ -1,16 +1,10 @@
 """All methods for Edit contact page"""
 from homework25.pages.base_page import BasePage
-from homework25.test_data.edit_contact_test_data import URL
 from homework24.locators.edit_contact_page import EditContactPageLocators
 
 
 class EditContactPage(BasePage):
     """Class Edit Contact page."""
-
-    def __init__(self, driver):
-        """Initialisation."""
-        super().__init__(driver)
-        self.url = URL
 
     def clean_edit_field(self, locator, value):
         """Clean and edit fields."""

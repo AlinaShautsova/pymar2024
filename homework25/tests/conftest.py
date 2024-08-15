@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from homework24.locators.contact_list_page import ContactListPageLocators
 from homework25.pages.login_page import LoginPage
 from homework25.test_data.login_page_test_data import URL, EMAIL, PASSWORD
 
@@ -31,4 +32,4 @@ def login(open_browser):
     login_page.login(EMAIL, PASSWORD)
 
     wait.until(EC.presence_of_element_located(
-        (By.XPATH, '//*[contains(text(), "Contact List")]')))
+        (By.XPATH, ContactListPageLocators.HEADER)))
