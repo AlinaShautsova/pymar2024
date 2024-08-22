@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+"""App page."""
 import random
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -13,6 +14,7 @@ images = [
 
 @app.route('/')
 def index():
+    """Index function for random choice images."""
     url = random.choice(images)
     return render_template('index.html', url=url)
 
