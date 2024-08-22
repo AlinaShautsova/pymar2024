@@ -1,9 +1,8 @@
-"""This module contains locators for Contact List App page."""
+"""This module contains locators for Login page."""
 
 
 class LoginPageLocators:
-    """The class contains inputs and buttons locators for authorization
-     user."""
+    """The class contains locators for login page."""
     # inputs
     LOGIN_EMAIL_INPUT = '//input[@id="email"]'
     LOGIN_PASSWORD_INPUT = '//input[@id="password"]'
