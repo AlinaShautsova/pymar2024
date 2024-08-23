@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from homework24.locators.add_contact_page import AddContactPageLocators
+from homework24.locators.contact_list_page import ContactListPageLocators
 from homework24.locators.edit_contact_page import EditContactPageLocators
 from homework24.methods import add_contact, edit_contact, delete_contact
 
@@ -20,7 +21,7 @@ def test_add_contact(open_browser, login):
         AddContactPageLocators.ADD_STREET_ADDRESS1_INPUT: 'First st 6',
         AddContactPageLocators.ADD_STREET_ADDRESS2_INPUT: 'Second 1',
         AddContactPageLocators.ADD_CITY_INPUT: 'New York',
-        AddContactPageLocators.ADD_STATE_OF_PROVINCE_INPUT: 'NY',
+        AddContactPageLocators.ADD_STATE_OR_PROVINCE_INPUT: 'NY',
         AddContactPageLocators.ADD_POSTAL_CODE_INPUT: '123409',
         AddContactPageLocators.ADD_COUNTRY_INPUT: 'USA',
     }
@@ -29,7 +30,8 @@ def test_add_contact(open_browser, login):
     contact_row = (WebDriverWait
                    (browser, 10).until
                    (EC.presence_of_element_located
-                    ((By.XPATH, EditContactPageLocators.CONTACT_TABLE_ROW))))
+                    ((By.XPATH, ContactListPageLocators.CONTACT_TABLE_ROW
+                      + '[1]'))))
     assert contact_row is not None
 
 

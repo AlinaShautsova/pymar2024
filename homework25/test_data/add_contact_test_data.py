@@ -1,0 +1,15 @@
+"""Test data for Add contact page."""
+
+URL = "https://thinking-tester-contact-list.herokuapp.com/addContact"
+
+FIRST_NAME = "Lewis"
+LAST_NAME = "Hamilton"
+BIRTH_DATE = "1985-01-07"
+EMAIL = "hamilton2@f1.com"
+PHONE = "2332323323"
+ADDRESS_STREET1 = "Main street 1"
+ADDRESS_STREET2 = "Main street 2"
+CITY = "London"
+STATE_OR_PROVINCE = "Central"
+POST_CODE = "120003"
+COUNTRY = "England"
